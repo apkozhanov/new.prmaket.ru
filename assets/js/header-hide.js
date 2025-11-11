@@ -30,30 +30,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager --></head>    
 <body>
 <div id="page">
-<header>
-    <div id="utp">
-        <p>«ПИАР-макет» — крупное макетное производство. Изготовление масштабных моделей, архитектурных, макетов, прототипов. Комплексное оформление музеев и выставок.</p>
-    </div>
-    <div id="main_info">
-        <div id="logo"><a href="vendor/prmaket.ru/"><img src="vendor/prmaket.ru/assets/images/logo.svg" style="margin-top: -15px; max-height: 120px; width: auto" alt="Логотип ПИАР макет" title="Макетная мастерская ПИАР макет" /></a>
-        </div>
-        <div id="adress">
-            <p><span class="icon icon-Mail"></span><a href="mailto:info@prmaket.ru">info@prmaket.ru</a></p>
-        </div>
-        <div id="phones">
-            <span><span class="icon icon-Phone2"></span> <span class="ya-phone"><a href="tel:+78129233347" rel="nofollow">8 (812) 923-33-47</a></span></span>
-            <p>в Санкт-Петербурге</p>
-            <span class="icon icon-Phone2"></span> <span><a href="tel:+79217565452" rel="nofollow">8 (921) 756-54-52</a></span></span>
-            <p>мобильный</p>
-        </div>
-    </div>
-    <div id="menu">
-        <button id="show_menu" class="cupid-green slide-toggle" data-target="#menu > ul"><img src="vendor/prmaket.ru/assets/images/burger.png" alt="" /> Показать меню</button>
-        <ul class="" >
-		<li><a href="vendor/prmaket.ru/">О наc</a><ul><li><a href="vendor/prmaket.ru/proizvodstvo-maketov">Производство</a></li><li><a href="vendor/prmaket.ru/vakansii">Вакансии</a></li></ul></li><li class="portfolio"><a href="vendor/prmaket.ru/portfolio">Портфолио</a><ul><li><a href="vendor/prmaket.ru/portfolio/gifts">Модели, подарочные макеты</a></li><li><a href="vendor/prmaket.ru/portfolio/industry">Промышленные макеты</a></li><li><a href="vendor/prmaket.ru/portfolio/architecture">Архитектурные макеты</a></li><li><a href="vendor/prmaket.ru/portfolio/houses">Макеты жилых комплексов и зданий</a></li><li><a href="vendor/prmaket.ru/portfolio/dacha">Загородная недвижимость</a></li><li><a href="vendor/prmaket.ru/portfolio/muzeynye-proekty">Музейные проекты</a></li></ul></li><li><a href="vendor/prmaket.ru/videos">Видео</a></li><li class="portfolio"><a href="vendor/prmaket.ru/proizvodstvo-maketov">Изготовление макетов</a><ul><li><a href="vendor/prmaket.ru/izgotovlenie-arhitekturnyh-maketov">Архитектурные макеты</a></li><li><a href="vendor/prmaket.ru/makety-domov">Макеты домов</a></li><li><a href="vendor/prmaket.ru/makety-zhilyh-kompleksov">Макеты жилых комплексов</a></li><li><a href="vendor/prmaket.ru/arhitekturnye-makety-zdaniy-i-sooruzheniy">Макеты зданий и сооружений</a></li><li><a href="vendor/prmaket.ru/izgotovlenie-promyshlennyh-maketov">Промышленные макеты</a></li><li><a href="vendor/prmaket.ru/izgotovlenie-podarochnyh-maketov">Подарочные макеты</a></li><li><a href="vendor/prmaket.ru/izgotovlenie-maketa-dlya-zanyatiy-na-obzh">Макеты для ОБЖ</a></li><li><a href="vendor/prmaket.ru/izgotovlenie-diplomnyh-maketov-na-zakaz">Дипломные макеты</a></li><li><a href="vendor/prmaket.ru/izgotovlenie-landshaftnyh-maketov-na-zakaz">Ландшафтные макеты</a></li><li><a href="vendor/prmaket.ru/izgotovlenie-maketa-zheleznoy-dorogi-na-zakaz">Макеты железных дорог</a></li><li><a href="vendor/prmaket.ru/srochnoe-izgotovlenie-maketov-dlya-vystavok">Макеты для выставок</a></li></ul></li><li><a href="vendor/prmaket.ru/nashi-uslugi">Услуги</a><ul><li><a href="vendor/prmaket.ru/pechat-na-3d-printere-na-zakaz-v-spb">Печать на 3D-принтере</a></li><li><a href="vendor/prmaket.ru/dostavka-v-regiony">Доставка</a></li><li><a href="vendor/prmaket.ru/garantija-na-makety">Гарантия</a></li></ul></li><li><a href="vendor/prmaket.ru/ceny-na-makety">Цены</a></li><li><a href="vendor/prmaket.ru/reviews">Отзывы</a><ul><li><a href="vendor/prmaket.ru/clients">Клиенты</a></li></ul></li><li><a href="vendor/prmaket.ru/kontakty">Контакты</a></li>
-</ul>
-	    </div>
+<header class="m-header">
+  <div class="m-header__logo">
+    <img src="assets/images/logo.png" alt="ПИАР МАКЕТ" />
+  </div>
+  <div class="m-header__actions">
+    <button class="m-header__btn m-header__btn--lang">
+      <img src="assets/images/Language.svg" alt="EN" />
+    </button>
+    <button class="m-header__btn m-header__btn--menu">
+      <img src="assets/images/Sandwich.svg" alt="Меню" />
+    </button>
+  </div>
 </header>
+
 <div id="content">
     <main>
                     <div id="breadcrumbs_container">
@@ -63,18 +53,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </nav>
             </div>
                     <div class="name_main"><h1>Макет ЖК "Малоохтинский 68"</h1></div>
-<div class="portfolio_photo">
-                        <a class="js-fancybox" data-fancybox-group="item" href="vendor/prmaket.ru/files/items/s217_1b42a92972beb2a8b99c89569d3c6332e.jpg"><img src="vendor/prmaket.ru/files/items/thumb_s217_1b42a92972beb2a8b99c89569d3c6332e.jpg" alt="фото Макет ЖК &quot;Малоохтинский 68&quot;" title="Макет ЖК &quot;Малоохтинский 68&quot;" /></a>
-                                    <a class="js-fancybox" data-fancybox-group="item" href="vendor/prmaket.ru/files/items/s217_255ddf31a3699ca0ceaab177e69488a89.jpg"><img src="vendor/prmaket.ru/files/items/thumb_s217_255ddf31a3699ca0ceaab177e69488a89.jpg" alt="фото Макет ЖК &quot;Малоохтинский 68&quot;" title="Макет ЖК &quot;Малоохтинский 68&quot;" /></a>
-                                    <a class="js-fancybox" data-fancybox-group="item" href="vendor/prmaket.ru/files/items/s217_3843a6bf396761fe8a24a75eadbce798a.jpg"><img src="vendor/prmaket.ru/files/items/thumb_s217_3843a6bf396761fe8a24a75eadbce798a.jpg" alt="фото Макет ЖК &quot;Малоохтинский 68&quot;" title="Макет ЖК &quot;Малоохтинский 68&quot;" /></a>
-                                    <a class="js-fancybox" data-fancybox-group="item" href="vendor/prmaket.ru/files/items/s217_40a1c4d17a96d9ff63743be80e66f90fa.jpg"><img src="vendor/prmaket.ru/files/items/thumb_s217_40a1c4d17a96d9ff63743be80e66f90fa.jpg" alt="фото Макет ЖК &quot;Малоохтинский 68&quot;" title="Макет ЖК &quot;Малоохтинский 68&quot;" /></a>
-                                    <a class="js-fancybox" data-fancybox-group="item" href="vendor/prmaket.ru/files/items/s217_59a8e0a5400a08e249c8ac31ae9088ce2.jpg"><img src="vendor/prmaket.ru/files/items/thumb_s217_59a8e0a5400a08e249c8ac31ae9088ce2.jpg" alt="фото Макет ЖК &quot;Малоохтинский 68&quot;" title="Макет ЖК &quot;Малоохтинский 68&quot;" /></a>
-                                    <a class="js-fancybox" data-fancybox-group="item" href="vendor/prmaket.ru/files/items/s217_6de4b1f77004941b7e2f185a1ec713c99.jpg"><img src="vendor/prmaket.ru/files/items/thumb_s217_6de4b1f77004941b7e2f185a1ec713c99.jpg" alt="фото Макет ЖК &quot;Малоохтинский 68&quot;" title="Макет ЖК &quot;Малоохтинский 68&quot;" /></a>
-                                    <a class="js-fancybox" data-fancybox-group="item" href="vendor/prmaket.ru/files/items/s217_7fb9d6b7ff882c002b3490d2fc0fddaa6.jpg"><img src="vendor/prmaket.ru/files/items/thumb_s217_7fb9d6b7ff882c002b3490d2fc0fddaa6.jpg" alt="фото Макет ЖК &quot;Малоохтинский 68&quot;" title="Макет ЖК &quot;Малоохтинский 68&quot;" /></a>
-                                    <a class="js-fancybox" data-fancybox-group="item" href="vendor/prmaket.ru/files/items/s217_84bc633bda92bcdd8200678c495af0045.jpg"><img src="vendor/prmaket.ru/files/items/thumb_s217_84bc633bda92bcdd8200678c495af0045.jpg" alt="фото Макет ЖК &quot;Малоохтинский 68&quot;" title="Макет ЖК &quot;Малоохтинский 68&quot;" /></a>
-                                    <a class="js-fancybox" data-fancybox-group="item" href="vendor/prmaket.ru/files/items/s217_903ac2e03ea22174d4464eb6d819627c4.jpg"><img src="vendor/prmaket.ru/files/items/thumb_s217_903ac2e03ea22174d4464eb6d819627c4.jpg" alt="фото Макет ЖК &quot;Малоохтинский 68&quot;" title="Макет ЖК &quot;Малоохтинский 68&quot;" /></a>
-                                    <a class="js-fancybox" data-fancybox-group="item" href="vendor/prmaket.ru/files/items/s217_101109d76aed3e89eb0ed20063fe1fe2a4.jpg"><img src="vendor/prmaket.ru/files/items/thumb_s217_101109d76aed3e89eb0ed20063fe1fe2a4.jpg" alt="фото Макет ЖК &quot;Малоохтинский 68&quot;" title="Макет ЖК &quot;Малоохтинский 68&quot;" /></a>
-                </div>
+<div class="m-photo-slider">
+  <div class="m-photo-slider__track">
+    <img src="https://prmaket.ru/files/items/s217_1b42a92972beb2a8b99c89569d3c6332e.jpg" alt="">
+    <img src="https://prmaket.ru/files/items/s217_255ddf31a3699ca0ceaab177e69488a89.jpg" alt="">
+    <img src="https://prmaket.ru/files/items/s217_3843a6bf396761fe8a24a75eadbce798a.jpg" alt="">
+    <!-- остальные -->
+  </div>
+</div>
+
 <div class="portfolio_text"><p>Макет Жилого Комплекса "Малоохтинский 68".</p>
 <p><strong>Масштаб макета</strong>&nbsp;&ndash; 1:125</p>
 <p><strong>Габаритные размеры</strong>&nbsp;&ndash; 2400 х 1500 мм</p>
