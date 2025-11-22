@@ -442,10 +442,13 @@ main a:hover {
 
 #breadcrumbs {
   border: 2px solid #C0C0C0;
-  padding: 10px;
+  padding: 4px 8px;
   display: inline-block;
   border-radius: 3px;
-  margin-bottom: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 13px;
+  line-height: 1.2;
 }
 
 #breadcrumbs p {
@@ -454,14 +457,96 @@ main a:hover {
 
 #breadcrumbs p {
   margin: 0;
+  line-height: 1.2;
 }
 
 #breadcrumbs a {
   color: #626161;
+  font-size: 13px;
 }
 
 #breadcrumbs a:hover {
   text-decoration: none;
+}
+
+#breadcrumbs .divider {
+  margin: 0 4px;
+  font-size: 13px;
+}
+
+#breadcrumbs .current {
+  font-size: 13px;
+}
+
+/* ===== Умные хлебные крошки (Smart Breadcrumbs) ===== */
+
+/* Скрытие средних элементов (остаются в DOM для SEO) */
+#breadcrumbs.breadcrumbs-smart.breadcrumbs-collapsed .breadcrumbs-middle {
+  visibility: hidden;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Скрываем разделитель первого элемента в свернутом состоянии */
+#breadcrumbs.breadcrumbs-smart.breadcrumbs-collapsed .breadcrumbs-first-divider {
+  visibility: hidden;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  width: 0;
+}
+
+/* Показываем разделитель первого элемента в развернутом состоянии */
+#breadcrumbs.breadcrumbs-smart.breadcrumbs-expanded .breadcrumbs-first-divider {
+  visibility: visible;
+  opacity: 1;
+  max-height: none;
+  overflow: visible;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0 4px;
+  padding: 0;
+  width: auto;
+}
+
+/* Элемент "..." видим только в свернутом состоянии */
+#breadcrumbs.breadcrumbs-smart .breadcrumbs-ellipsis {
+  display: none;
+}
+
+#breadcrumbs.breadcrumbs-smart.breadcrumbs-collapsed .breadcrumbs-ellipsis {
+  display: inline;
+  margin: 0;
+  visibility: visible;
+  opacity: 1;
+  font-weight: bold;
+}
+
+/* В развернутом состоянии показываем все элементы */
+#breadcrumbs.breadcrumbs-smart.breadcrumbs-expanded .breadcrumbs-middle {
+  visibility: visible;
+  opacity: 1;
+  max-height: none;
+  overflow: visible;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0 4px;
+  padding: 0;
+}
+
+#breadcrumbs.breadcrumbs-smart.breadcrumbs-expanded .breadcrumbs-ellipsis {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .thanks_item {
@@ -769,16 +854,23 @@ table th {
     border-bottom-color: transparent;
 }
 
+.name_main {
+  margin-top: 0;
+}
+
 .name_main h1 {
   text-align: center;
   border-bottom: 1px solid #C0C0C0;
   border-top: 1px solid #C0C0C0;
   width: 500px;
   text-transform: uppercase;
-  padding: 7px 0;
-  font-size: 14px;
+  padding: 12px 0;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 0;
   margin-bottom: 15px;
   margin-left: 100px;
+  letter-spacing: 0.5px;
 }
 
 .name_main h2 {
@@ -3096,10 +3188,17 @@ html[xmlns] .slides { display: block; }
     display: block;
   }
 
-  #breadcrumbs_container,
-  #content,
+  #breadcrumbs_container {
+    margin-top: 0 !important;
+    margin-bottom: 22px !important;
+  }
+
+  #content {
+    margin-top: 22px !important;
+  }
+
   main {
-    margin-top: 12px;
+    margin-top: 0;
   }
 }
 /* горизонтальный слайдер картинок */

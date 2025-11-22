@@ -58,10 +58,86 @@
     display: block;
   }
 
-  #breadcrumbs_container,
-  #content,
+  #breadcrumbs_container {
+    margin-top: 0 !important;
+    margin-bottom: 22px !important;
+  }
+
+  #content {
+    margin-top: 22px !important;
+  }
+
   main {
-    margin-top: 12px;
+    margin-top: 0;
+  }
+
+  /* ===== Умные хлебные крошки на мобильных ===== */
+  #breadcrumbs.breadcrumbs-smart.breadcrumbs-collapsed {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+
+  #breadcrumbs.breadcrumbs-smart.breadcrumbs-collapsed p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    padding-right: 40px; /* место для fade эффекта */
+    font-size: 0; /* Убираем пробелы между inline элементами */
+    letter-spacing: 0; /* Убираем межбуквенные интервалы */
+  }
+
+  #breadcrumbs.breadcrumbs-smart.breadcrumbs-collapsed p > * {
+    font-size: 13px; /* Восстанавливаем размер шрифта для видимых элементов */
+    display: inline-block; /* Убираем пробелы между элементами */
+    vertical-align: baseline;
+  }
+  
+  #breadcrumbs.breadcrumbs-smart.breadcrumbs-collapsed p > .breadcrumbs-ellipsis {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Fade эффект справа при свернутом состоянии */
+  #breadcrumbs.breadcrumbs-smart.breadcrumbs-collapsed p::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 100%;
+    background: linear-gradient(to right, 
+      rgba(255, 255, 255, 0) 0%, 
+      rgba(255, 255, 255, 0.7) 30%, 
+      rgba(255, 255, 255, 0.95) 70%, 
+      rgba(255, 255, 255, 1) 100%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Убираем fade при развернутом состоянии */
+  #breadcrumbs.breadcrumbs-smart.breadcrumbs-expanded p::after {
+    display: none;
+  }
+
+  /* Развернутое состояние - многострочное */
+  #breadcrumbs.breadcrumbs-smart.breadcrumbs-expanded p {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    padding-right: 0;
+  }
+
+  /* Плавная анимация при раскрытии */
+  #breadcrumbs.breadcrumbs-smart.breadcrumbs-expanded {
+    transition: max-height 0.3s ease;
+  }
+
+  #breadcrumbs.breadcrumbs-smart.breadcrumbs-expanded p {
+    transition: all 0.3s ease;
   }
 }
 /* горизонтальный слайдер картинок */
