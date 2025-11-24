@@ -3294,22 +3294,25 @@ html[xmlns] .slides { display: block; }
 .similar-projects__gallery {
   display: flex;
   gap: 12px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
   padding: 0 10px;
   margin-top: 15px;
-  justify-content: space-between;
+  scrollbar-width: thin;
+  scrollbar-color: #C0C0C0 #f1f1f1;
 }
 
 .similar-projects__item {
-  flex: 1;
+  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 0;
+  width: 220px;
 }
 
 .similar-projects__item img {
   width: 100%;
-  max-width: 200px;
   height: auto;
   aspect-ratio: 1;
   object-fit: cover;
@@ -3322,5 +3325,25 @@ html[xmlns] .slides { display: block; }
   text-align: center;
   color: #626161;
   margin-bottom: 0;
+  width: 100%;
+}
+
+/* Стилизация скроллбара */
+.similar-projects__gallery::-webkit-scrollbar {
+  height: 6px;
+}
+
+.similar-projects__gallery::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.similar-projects__gallery::-webkit-scrollbar-thumb {
+  background: #C0C0C0;
+  border-radius: 3px;
+}
+
+.similar-projects__gallery::-webkit-scrollbar-thumb:hover {
+  background: #a0a0a0;
 }
 

@@ -184,24 +184,35 @@
   }
 
   .similar-projects__gallery {
+    display: flex;
     padding: 0 10px;
     gap: 12px;
-    justify-content: space-between;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .similar-projects__gallery::-webkit-scrollbar {
+    display: none;
   }
 
   .similar-projects__item {
-    flex: 1;
+    flex: 0 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 0;
+    width: 111px;
   }
 
   .similar-projects__item img {
-    width: 100%;
-    max-width: 111px;
-    height: auto;
-    aspect-ratio: 1;
+    width: 111px !important;
+    height: 111px !important;
+    max-width: 111px !important;
+    max-height: 111px !important;
+    min-width: 111px !important;
+    min-height: 111px !important;
+    object-fit: cover;
+    flex-shrink: 0;
   }
 
   .similar-projects__item p {
