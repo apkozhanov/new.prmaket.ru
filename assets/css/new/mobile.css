@@ -201,10 +201,50 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 111px;
+    width: 173px;
   }
 
   .similar-projects__item img {
+    width: 173px !important;
+    height: 173px !important;
+    max-width: 173px !important;
+    max-height: 173px !important;
+    min-width: 173px !important;
+    min-height: 173px !important;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .similar-projects__item p {
+    font-size: 12px;
+    width: 173px;
+    text-align: center;
+  }
+
+  /* Стили для плитки (grid) */
+  .similar-projects-grid {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .similar-projects-grid__gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 0 10px;
+    margin-top: 15px;
+    justify-items: center;
+  }
+
+  .similar-projects-grid__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .similar-projects-grid__item img {
     width: 111px !important;
     height: 111px !important;
     max-width: 111px !important;
@@ -212,13 +252,14 @@
     min-width: 111px !important;
     min-height: 111px !important;
     object-fit: cover;
-    flex-shrink: 0;
   }
 
-  .similar-projects__item p {
+  .similar-projects-grid__item p {
     font-size: 12px;
     width: 111px;
     text-align: center;
+    margin-top: 8px;
+    margin-bottom: 0;
   }
 }
 .m-header {
