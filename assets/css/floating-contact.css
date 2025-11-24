@@ -1,0 +1,63 @@
+/* Плавающая кнопка связи для мобильных устройств */
+@media (max-width: 768px) {
+  .floating-contact-btn {
+    position: fixed;
+    left: 16px;
+    bottom: 16px;
+    width: 52px;
+    height: 52px;
+    background-color: #AFD355;
+    border: 2px solid #8CC540;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow 0.2s ease;
+    animation: pulse 2s ease-in-out infinite;
+    overflow: hidden;
+  }
+
+  .floating-contact-btn:active {
+    animation: none;
+    transform: scale(0.95);
+  }
+
+  .floating-contact-btn__icon {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    transition: opacity 0.5s ease-in-out;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .floating-contact-btn__icon.fade-out {
+    opacity: 0;
+  }
+
+  .floating-contact-btn__icon.fade-in {
+    opacity: 1;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+}
+
+/* Скрываем на десктопе */
+@media (min-width: 769px) {
+  .floating-contact-btn {
+    display: none !important;
+  }
+}
+
