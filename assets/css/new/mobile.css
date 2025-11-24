@@ -190,6 +190,33 @@
     overflow-x: auto;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
+    flex-wrap: nowrap;
+  }
+
+  /* Для минимального разрешения - одна колонка */
+  @media (max-width: 360px) {
+    .similar-projects__gallery {
+      flex-direction: column;
+      overflow-x: hidden;
+      overflow-y: auto;
+      align-items: center;
+    }
+
+    .similar-projects__item {
+      width: 100%;
+      max-width: 296px;
+    }
+
+    .similar-projects__item img {
+      width: 100% !important;
+      max-width: 296px !important;
+      min-width: auto !important;
+    }
+
+    .similar-projects__item p {
+      width: 100%;
+      max-width: 296px;
+    }
   }
 
   .similar-projects__gallery::-webkit-scrollbar {
@@ -201,65 +228,55 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 173px;
+    width: 296px;
   }
 
   .similar-projects__item img {
-    width: 173px !important;
-    height: 173px !important;
-    max-width: 173px !important;
-    max-height: 173px !important;
-    min-width: 173px !important;
-    min-height: 173px !important;
+    width: 296px !important;
+    height: 296px !important;
+    max-width: 296px !important;
+    max-height: 296px !important;
+    min-width: 296px !important;
+    min-height: 296px !important;
     object-fit: cover;
     flex-shrink: 0;
   }
 
   .similar-projects__item p {
-    font-size: 12px;
-    width: 173px;
+    font-size: 14px;
+    width: 296px;
     text-align: center;
+    margin-top: 12px;
   }
 
-  /* Стили для плитки (grid) */
-  .similar-projects-grid {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 100%;
-    box-sizing: border-box;
+  /* Кнопка "Показать еще" */
+  .similar-projects__show-more {
+    display: block;
+    width: calc(100% - 20px);
+    max-width: 300px;
+    margin: 20px auto 0;
+    padding: 12px 24px;
+    background-color: #8CC540;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
   }
 
-  .similar-projects-grid__gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    padding: 0 10px;
-    margin-top: 15px;
-    justify-items: center;
+  .similar-projects__show-more:hover {
+    background-color: #7ab330;
   }
 
-  .similar-projects-grid__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .similar-projects__show-more:active {
+    transform: scale(0.98);
   }
 
-  .similar-projects-grid__item img {
-    width: 111px !important;
-    height: 111px !important;
-    max-width: 111px !important;
-    max-height: 111px !important;
-    min-width: 111px !important;
-    min-height: 111px !important;
-    object-fit: cover;
-  }
-
-  .similar-projects-grid__item p {
-    font-size: 12px;
-    width: 111px;
-    text-align: center;
-    margin-top: 8px;
-    margin-bottom: 0;
+  /* Общий цвет для всех ссылок на сайте */
+  a {
+    color: #8CC540 !important;
   }
 }
 .m-header {
@@ -275,3 +292,73 @@
 .m-header.hide {
   transform: translateY(-100%);
 }
+
+  /* Мобильное меню */
+  .m-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    padding-top: 60px;
+  }
+
+  .m-menu--open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .m-menu__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #fff;
+    max-width: 300px;
+    width: 80%;
+    height: 100%;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+  }
+
+  .m-menu--open .m-menu__list {
+    transform: translateX(0);
+  }
+
+  .m-menu__list li {
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .m-menu__list li:last-child {
+    border-bottom: none;
+  }
+
+  .m-menu__list a {
+    display: block;
+    padding: 16px 20px;
+    text-decoration: none;
+    color: #626161;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+  }
+
+  .m-menu__list a:hover,
+  .m-menu__list a:active {
+    background-color: #f5f5f5;
+  }
+
+  /* Активное состояние кнопки меню */
+  .m-header__btn--active {
+    background-color: #f0f0f0;
+  }
+
+  /* Блокировка скролла при открытом меню */
+  body.menu-open {
+    overflow: hidden;
+  }

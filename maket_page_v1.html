@@ -33,6 +33,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="assets/js/m-header-scroll.js" defer></script>
 <script src="assets/js/breadcrumbs.js" defer></script>
 <script src="assets/js/floating-contact.js" defer></script>
+<script src="assets/js/m-menu.js" defer></script>
   
 <body>
 <div id="page">
@@ -49,6 +50,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </button>
   </div>
 </header>
+
+<nav id="m-menu" class="m-menu">
+  <ul class="m-menu__list">
+    <li><a href="vendor/prmaket.ru/">Главная</a></li>
+    <li><a href="vendor/prmaket.ru/portfolio">Портфолио</a></li>
+    <li><a href="vendor/prmaket.ru/sitemap">Карта сайта</a></li>
+    <li><a href="vendor/prmaket.ru/kontakty">Контакты</a></li>
+  </ul>
+</nav>
 
 <div id="content">
     <main>
@@ -110,34 +120,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <p>Макет Электростанции и ГДГ</p>
         </div>
     </div>
-</div>
-
-<div class="similar-projects-grid">
-    <div class="name_main">
-        <h2>Похожие проекты</h2>
-    </div>
-    <div class="similar-projects-grid__gallery">
-        <div class="similar-projects-grid__item">
-            <img src="https://prmaket.ru/files/items/s341f675c8833f7586bcba5c9e208a60382a.jpg" alt="Макет Электростанции и ГДГ" />
-            <p>Макет Электростанции и ГДГ</p>
-        </div>
-        <div class="similar-projects-grid__item">
-            <img src="https://prmaket.ru/files/items/s341f675c8833f7586bcba5c9e208a60382a.jpg" alt="Макет Электростанции и ГДГ" />
-            <p>Макет Электростанции и ГДГ</p>
-        </div>
-        <div class="similar-projects-grid__item">
-            <img src="https://prmaket.ru/files/items/s341f675c8833f7586bcba5c9e208a60382a.jpg" alt="Макет Электростанции и ГДГ" />
-            <p>Макет Электростанции и ГДГ</p>
-        </div>
-        <div class="similar-projects-grid__item">
-            <img src="https://prmaket.ru/files/items/s341f675c8833f7586bcba5c9e208a60382a.jpg" alt="Макет Электростанции и ГДГ" />
-            <p>Макет Электростанции и ГДГ</p>
-        </div>
-        <div class="similar-projects-grid__item">
-            <img src="https://prmaket.ru/files/items/s341f675c8833f7586bcba5c9e208a60382a.jpg" alt="Макет Электростанции и ГДГ" />
-            <p>Макет Электростанции и ГДГ</p>
-        </div>
-    </div>
+    <button class="similar-projects__show-more">Показать еще</button>
 </div>
 
 <form id="contact" class="contactform_main js-ajax-form" action="/" data-url="send/feedback" data-callback="bottom_form">

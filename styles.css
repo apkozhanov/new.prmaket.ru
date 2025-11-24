@@ -3347,3 +3347,8 @@ html[xmlns] .slides { display: block; }
   background: #a0a0a0;
 }
 
+/* Общий цвет для всех ссылок на сайте */
+a {
+  color: #8CC540 !important;
+}
+
