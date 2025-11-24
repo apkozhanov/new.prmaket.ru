@@ -3284,3 +3284,43 @@ html[xmlns] .slides { display: block; }
     margin-top: 0 !important;
   }
 }
+
+/* Блок "Похожие проекты" */
+.similar-projects {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.similar-projects__gallery {
+  display: flex;
+  gap: 12px;
+  padding: 0 10px;
+  margin-top: 15px;
+  justify-content: space-between;
+}
+
+.similar-projects__item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+}
+
+.similar-projects__item img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.similar-projects__item p {
+  margin-top: 8px;
+  font-size: 13px;
+  text-align: center;
+  color: #626161;
+  margin-bottom: 0;
+}
+

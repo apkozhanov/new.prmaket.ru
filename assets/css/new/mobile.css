@@ -174,6 +174,41 @@
   .m-photo-slider::-webkit-scrollbar {
     display: none;
   }
+
+  /* Блок "Похожие проекты" на мобильных */
+  .similar-projects {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .similar-projects__gallery {
+    padding: 0 10px;
+    gap: 12px;
+    justify-content: space-between;
+  }
+
+  .similar-projects__item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0;
+  }
+
+  .similar-projects__item img {
+    width: 100%;
+    max-width: 111px;
+    height: auto;
+    aspect-ratio: 1;
+  }
+
+  .similar-projects__item p {
+    font-size: 12px;
+    width: 111px;
+    text-align: center;
+  }
 }
 .m-header {
   position: fixed;
