@@ -1,9 +1,9 @@
 <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d_101_22)">
 <rect x="6" y="5" width="50" height="50" rx="10" fill="white"/>
-<rect x="6.5" y="5.5" width="49" height="49" rx="9.5" stroke="#8CC540"/>
+<rect x="7.5" y="6.5" width="47" height="47" rx="8.5" stroke="#8CC540" stroke-width="3"/>
 </g>
-<path d="M29.5078 35.4668V37H23.3359V35.4668H29.5078ZM23.6582 22.7812V37H21.8613V22.7812H23.6582ZM28.6777 28.8945V30.4277H23.3359V28.8945H28.6777ZM29.4102 22.7812V24.3242H23.3359V22.7812H29.4102ZM41.0996 22.7812V37H39.293L33.5996 26.0332V37H31.8027V22.7812H33.5996L39.3223 33.7773V22.7812H41.0996Z" fill="black"/>
+<path d="M28.5117 38.7002V41H19.2539V38.7002H28.5117ZM19.7373 19.6719V41H17.042V19.6719H19.7373ZM27.2666 28.8418V31.1416H19.2539V28.8418H27.2666ZM28.3652 19.6719V21.9863H19.2539V19.6719H28.3652ZM45.8994 19.6719V41H43.1895L34.6494 24.5498V41H31.9541V19.6719H34.6494L43.2334 36.166V19.6719H45.8994Z" fill="black"/>
 <defs>
 <filter id="filter0_d_101_22" x="0" y="0" width="62" height="62" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
