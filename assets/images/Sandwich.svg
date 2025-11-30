@@ -1,21 +1,10 @@
 <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_d_98_10)">
-<rect x="6" y="5" width="50" height="50" rx="10" fill="white"/>
-<rect x="6.5" y="5.5" width="49" height="49" rx="9.5" stroke="#E5E5E5"/>
-</g>
-<line x1="18.5" y1="18.5" x2="43.5" y2="18.5" stroke="#8CC540" stroke-width="3" stroke-linecap="round"/>
-<line x1="18.5" y1="28.5" x2="43.5" y2="28.5" stroke="#8CC540" stroke-width="3" stroke-linecap="round"/>
-<line x1="18.5" y1="38.5" x2="43.5" y2="38.5" stroke="#8CC540" stroke-width="3" stroke-linecap="round"/>
-<defs>
-<filter id="filter0_d_98_10" x="0" y="0" width="62" height="62" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dy="1"/>
-<feGaussianBlur stdDeviation="3"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_98_10"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_98_10" result="shape"/>
-</filter>
-</defs>
+  <!-- Фон кнопки -->
+  <rect x="6" y="5" width="50" height="50" rx="10" fill="white"></rect>
+  <rect x="6.5" y="5.5" width="49" height="49" rx="9.5" stroke="#E5E5E5"></rect>
+
+  <!-- Линии бургера -->
+  <line x1="18.5" y1="18.5" x2="43.5" y2="18.5" stroke="#8CC540" stroke-width="3" stroke-linecap="round"></line>
+  <line x1="18.5" y1="28.5" x2="43.5" y2="28.5" stroke="#8CC540" stroke-width="3" stroke-linecap="round"></line>
+  <line x1="18.5" y1="38.5" x2="43.5" y2="38.5" stroke="#8CC540" stroke-width="3" stroke-linecap="round"></line>
 </svg>
