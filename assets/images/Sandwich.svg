@@ -1,7 +1,6 @@
 <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Фон кнопки -->
+  <!-- Белая кнопка без рамки -->
   <rect x="6" y="5" width="50" height="50" rx="10" fill="white"></rect>
-  <rect x="6.5" y="5.5" width="49" height="49" rx="9.5" stroke="#E5E5E5"></rect>
 
   <!-- Линии бургера -->
   <line x1="18.5" y1="18.5" x2="43.5" y2="18.5" stroke="#8CC540" stroke-width="3" stroke-linecap="round"></line>
