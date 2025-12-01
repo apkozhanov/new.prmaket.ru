@@ -1,3 +1,10 @@
-<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="6" cy="6" r="4.5" stroke="#414142" stroke-width="2"></circle>
+<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.75" clip-path="url(#clip0_118_40)">
+<path d="M5 9C7.20914 9 9 7.20914 9 5C9 2.79086 7.20914 1 5 1C2.79086 1 1 2.79086 1 5C1 7.20914 2.79086 9 5 9Z" stroke="white" stroke-opacity="0.8" stroke-width="1.2"/>
+</g>
+<defs>
+<clipPath id="clip0_118_40">
+<rect width="10" height="10" fill="white"/>
+</clipPath>
+</defs>
 </svg>
