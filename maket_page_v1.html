@@ -34,6 +34,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="assets/js/breadcrumbs.js" defer></script>
 <script src="assets/js/floating-contact.js" defer></script>
 <script src="assets/js/m-menu.js" defer></script>
+<script src="assets/js/slider.js" defer></script>
   
 <body>
 <div id="page">
@@ -70,11 +71,36 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div>
                     <div class="name_main"><h1>Макет ЖК "Малоохтинский&nbsp;68"</h1></div>
 <div class="m-photo-slider">
-  <div class="m-photo-slider__track">
-    <img src="https://prmaket.ru/files/items/s217_1b42a92972beb2a8b99c89569d3c6332e.jpg" alt="">
-    <img src="https://prmaket.ru/files/items/s217_255ddf31a3699ca0ceaab177e69488a89.jpg" alt="">
-    <img src="https://prmaket.ru/files/items/s217_3843a6bf396761fe8a24a75eadbce798a.jpg" alt="">
-    <!-- остальные -->
+  <div class="slider">
+    <div class="slider__track">
+      <div class="slider__slide">
+        <img src="https://prmaket.ru/files/items/s217_1b42a92972beb2a8b99c89569d3c6332e.jpg" alt="" class="slider__image">
+      </div>
+      <div class="slider__slide">
+        <img src="https://prmaket.ru/files/items/s217_255ddf31a3699ca0ceaab177e69488a89.jpg" alt="" class="slider__image">
+      </div>
+      <div class="slider__slide">
+        <img src="https://prmaket.ru/files/items/s217_3843a6bf396761fe8a24a75eadbce798a.jpg" alt="" class="slider__image">
+      </div>
+      <!-- остальные -->
+    </div>
+    <button class="slider__arrow slider__arrow--left">
+      <img src="assets/images/arrow-left.svg" alt="">
+    </button>
+    <button class="slider__arrow slider__arrow--right">
+      <img src="assets/images/arrow-right.svg" alt="">
+    </button>
+    <div class="slider__dots">
+      <button class="slider__dot slider__dot--active" data-index="0">
+        <img src="assets/images/dot-active.svg" alt="" class="slider__dot-icon">
+      </button>
+      <button class="slider__dot" data-index="1">
+        <img src="assets/images/dot-inactive.svg" alt="" class="slider__dot-icon">
+      </button>
+      <button class="slider__dot" data-index="2">
+        <img src="assets/images/dot-inactive.svg" alt="" class="slider__dot-icon">
+      </button>
+    </div>
   </div>
 </div>
 
