@@ -761,44 +761,69 @@ footer #f_phones a:hover {
 }
 
 .m-btn-more {
-  display: inline-flex;
+  -webkit-appearance: none;
+  appearance: none;
+  display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  width: 100%;
-  margin-top: 12px;
-  padding: 10px 20px;
+  width: 172px;
+  margin: 12px auto 0;
+  background: #FFFFFF;
+  border: none;
   border-radius: 12px;
-  border: 1px solid #8CC540;
-  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  padding: 12px 24px;
+  font-family: "DIN Pro", "Trebuchet MS", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0.02em;
   color: #414142;
-  font-family: 'DIN Pro', 'Trebuchet MS', sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 1.2;
   cursor: pointer;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
+  transition: background-color 0.2s ease;
   box-sizing: border-box;
   text-align: center;
 }
 
-.m-btn-more__icon {
-  color: #8CC540;
-  font-size: 16px;
-  line-height: 1;
-  transition: color 0.2s ease;
-}
-
 .m-btn-more:hover {
-  background-color: rgba(140, 197, 64, 0.1);
+  background-color: rgba(140, 197, 64, 0.08);
 }
 
 .m-btn-more:active {
-  background-color: rgba(140, 197, 64, 0.18);
+  background-color: rgba(140, 197, 64, 0.15);
 }
 
-.m-btn-more:active .m-btn-more__icon {
-  color: #7AAE37;
+/* Кнопка "Отправить" - Primary CTA (копия m-btn-more с зелёной заливкой) */
+.m-btn-submit {
+  -webkit-appearance: none;
+  appearance: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: #8CC540;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  padding: 12px 24px;
+  font-family: "DIN Pro", "Trebuchet MS", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.m-btn-submit:hover {
+  background-color: #7AAE37;
+}
+
+.m-btn-submit:active {
+  background-color: #6D982F;
 }
 
 /* Базовые стили для всех ссылок */
