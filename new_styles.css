@@ -150,10 +150,14 @@ aside {
 }
 #peter_aside a {
     font-style: normal;
-    color: #0000FF;
-}
-#peter_aside a:hover {
+    color: #8CC540;
     text-decoration: none;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+#peter_aside a:hover {
+    color: #7ab330;
+    text-decoration: underline;
 }
 #news_aside {
   width: 100%;
@@ -173,10 +177,14 @@ aside {
 }
 #news_aside a {
   font-style: normal;
-  color: #0000FF;
-}
-#news_aside a:hover {
+  color: #8CC540;
   text-decoration: none;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+#news_aside a:hover {
+  color: #7ab330;
+  text-decoration: underline;
 }
 #content {
   overflow: hidden;
@@ -190,14 +198,15 @@ main {
     margin: 0 auto;
     box-sizing: border-box;
 }
-main p {
-  /*text-indent: 10px;*/
-}
 main a {
-  color: #626161;
-}
-main a:hover {
+  color: #8CC540;
   text-decoration: none;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+main a:hover {
+  color: #7ab330;
+  text-decoration: underline;
 }
 #breadcrumbs {
   border: none;
@@ -213,9 +222,7 @@ main a:hover {
   color: rgba(65, 65, 66, 0.7);
 }
 #breadcrumbs p {
- text-indent: 0;
-}
-#breadcrumbs p {
+  text-indent: 0;
   margin: 0;
   line-height: 1.2;
 }
@@ -223,9 +230,12 @@ main a:hover {
   color: #8CC540;
   font-size: 12px;
   text-decoration: none;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
 }
+
 #breadcrumbs a:hover {
-  text-decoration: none;
+  color: #7ab330;
+  text-decoration: underline;
 }
 #breadcrumbs .divider {
   margin: 0 4px;
@@ -398,8 +408,10 @@ footer {
 }
 #copy a {
   font-style: normal;
-  color: #626161;
+  color: #8CC540;
   font-size: 16px;
+  text-decoration: none;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
 }
 .footer-menu ul{
     list-style: none;
@@ -413,15 +425,23 @@ footer {
 }
 .footer-menu a{
     font-style: normal;
-    color: #626161;
+    color: #8CC540;
     font-size: 16px;
+    text-decoration: none;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.footer-menu a:hover {
+    color: #7ab330;
+    text-decoration: underline;
 }
 .footer-menu  .current {
     font-size: 16px;
     color: #C0C0C0;
 }
 #copy a:hover {
-  text-decoration: none;
+  color: #7ab330;
+  text-decoration: underline;
 }
 footer #f_button {
   margin-top: 30px;
@@ -444,10 +464,14 @@ footer #f_button {
   color: #C0C0C0;
 }
 footer #f_phones a {
-  color: #626161;
-}
-footer #f_phones a:hover {
+  color: #8CC540;
   text-decoration: none;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+footer #f_phones a:hover {
+  color: #7ab330;
+  text-decoration: underline;
 }
 #activ_form_2 input {
   height: 33px;
@@ -523,10 +547,14 @@ footer #f_phones a:hover {
     text-align: left;
 }
 .news-item-info a {
-    color: #626161 !important;
+    color: #8CC540;
+    text-decoration: none;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
 }
+
 .news-item-info a:hover {
-    text-decoration: none !important;
+    color: #7ab330;
+    text-decoration: underline;
 }
 #reviews_slider ul {
     width: 20000em;
@@ -546,7 +574,14 @@ footer #f_phones a:hover {
     margin-left: 90px;
 }
 .privacy a{
-    color: #626161;
+    color: #8CC540;
+    text-decoration: none;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.privacy a:hover {
+    color: #7ab330;
+    text-decoration: underline;
 }
 .form-privacy {
     font-size: 12px;
@@ -568,15 +603,13 @@ footer #f_phones a:hover {
 	float: left;
 	overflow: hidden;
 }
-.icon {font-size: 32px}
-
 @font-face {
 	font-family: 'Stroke-Gap-Icons';
 	src: url('vendor/prmaket.ru/assets/fonts/Stroke-Gap-Icons.eot');
 }
 @font-face {
 	font-family: 'Stroke-Gap-Icons';
-	src: url(vendor/prmaket.ru/assets/fonts/Stroke-Gap-Icons.woff) format('woff');
+	src: url('vendor/prmaket.ru/assets/fonts/Stroke-Gap-Icons.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -588,6 +621,7 @@ footer #f_phones a:hover {
 	font-variant: normal;
 	text-transform: none;
 	line-height: 1;
+	font-size: 32px;
 
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
@@ -629,10 +663,6 @@ footer #f_phones a:hover {
 
 .m-header.hide {
   transform: translate(-50%, -100%);
-}
-
-.m-header.hide {
-  transform: translateY(-100%);
 }
 
 .m-header__logo {
@@ -754,8 +784,24 @@ footer #f_phones a:hover {
   transform: scale(0.98);
 }
 
+/* Базовые стили для всех ссылок */
 a {
-  color: #8CC540 !important;
+  color: #8CC540;
+  text-decoration: none;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+a:hover {
+  color: #7ab330;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #6a9a20;
+}
+
+a:visited {
+  color: #8CC540;
 }
 /* Мобильное меню */
 .m-menu {
@@ -807,13 +853,19 @@ a {
   display: block;
   padding: 16px 20px;
   text-decoration: none;
-  color: #626161;
+  color: #8CC540;
   font-size: 16px;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.m-menu__list a:hover {
+  background-color: #f5f5f5;
+  color: #7ab330;
 }
 
 .m-menu__list a:active {
-  background-color: #f5f5f5;
+  background-color: #f0f0f0;
+  color: #6a9a20;
 }
 
 /* Мобильный слайдер для 320px */
