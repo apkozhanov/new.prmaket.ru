@@ -27,11 +27,18 @@
     
     // Добавляем обработчик клика
     button.addEventListener('click', function() {
+      // Прокручиваем к началу страницы или к форме, если она есть
       const contactElement = document.getElementById('contact');
       if (contactElement) {
         contactElement.scrollIntoView({
           behavior: 'smooth',
           block: 'start'
+        });
+      } else {
+        // Если формы нет, прокручиваем к началу страницы
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
         });
       }
     });

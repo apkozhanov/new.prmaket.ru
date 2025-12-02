@@ -2764,7 +2764,9 @@ html[xmlns] .slides { display: block; }
 		background-image: url('vendor/prmaket.ru/assets/3rd-party/fancybox2/fancybox_loading@2x.gif');
 		background-size: 24px 24px; /*The size of the normal image, half the size of the hi-res image*/
 	}
-}@media screen and (max-width: 1010px) {
+}
+@media screen and (max-width: 1010px) {
+  /* --- Disabled for widths above 320px ---
 
     main {
         width: 100%;
@@ -2870,9 +2872,11 @@ html[xmlns] .slides { display: block; }
     .portfolio_photo {
         text-align: center;
     }
+  --- End disabled block --- */
 }
 
 @media screen and (max-width: 710px) {
+  /* --- Disabled for widths above 320px ---
     #show_menu {
         display: inline-block;
     }
@@ -3028,10 +3032,11 @@ html[xmlns] .slides { display: block; }
         width: 48px;
         left: -58px;
     }
+  --- End disabled block --- */
 }
 
 @media screen and (max-width: 510px) {
-
+  /* --- Disabled for widths above 320px ---
 
     .index-advantages-item {
         width: 100%;
@@ -3117,6 +3122,7 @@ html[xmlns] .slides { display: block; }
     .maket-advantages {
         text-align: center;
     }
+  --- End disabled block --- */
 }
 
 @media screen and (max-width:320px) {
@@ -3128,10 +3134,21 @@ html[xmlns] .slides { display: block; }
     }
 }
 
+/* Мобильный вид слайдера на экране 320px */
+@media (max-width: 480px) {
+  /* --- Disabled for widths above 320px ---
+  .m-photo-slider {
+    max-width: 297px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  --- End disabled block --- */
+}
+
 /* ===== mobile header fix (шире, чтобы точно сработало) ===== */
 @media (max-width: 768px) {
-
-  /* старый верх на мобилке не нужен */
+  /* --- Disabled for widths above 320px ---
   #main_info,
   #utp,
   #menu {
@@ -3204,7 +3221,9 @@ html[xmlns] .slides { display: block; }
   main {
     margin-top: 0;
   }
+  --- End disabled block --- */
 }
+/* --- DISABLED TEMPORARILY ---
 /* горизонтальный слайдер картинок */
 @media (max-width: 768px) {
   .m-photo-slider {
@@ -3429,6 +3448,7 @@ html[xmlns] .slides { display: block; }
     height: 10px;
   }
 }
+--- END DISABLED --- */
 .m-header {
   position: fixed;
   top: 0;
@@ -3461,21 +3481,24 @@ html[xmlns] .slides { display: block; }
 
 /* чтобы контент не залезал под шапку */
 @media (max-width: 1024px) {
+  /* --- Disabled for widths above 320px ---
   body {
-    padding-top: 74px; /* высота твоей шапки: 50 + отступы */
+    padding-top: 74px;
   }
+  --- End disabled block --- */
 }
 /* фикс: чтобы мобильная шапка не перекрывала страницу */
 @media (max-width: 1024px) {
+  /* --- Disabled for widths above 320px ---
   body {
-    padding-top: 90px !important; /* подгони число, если шапка ниже/выше */
+    padding-top: 90px !important;
   }
 
-  /* если у тебя основной контент в #content или в main — подстрахуемся */
   #content,
   main {
     margin-top: 0 !important;
   }
+  --- End disabled block --- */
 }
 
 /* Блок "Похожие проекты" */
