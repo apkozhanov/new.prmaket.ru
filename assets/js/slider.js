@@ -4,43 +4,66 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const track = slider.querySelector('.slider__track');
   const slides = slider.querySelectorAll('.slider__slide');
-  const dots = slider.querySelectorAll('.slider__dot');
   const arrowLeft = slider.querySelector('.slider__arrow--left');
   const arrowRight = slider.querySelector('.slider__arrow--right');
+  const dotsContainer = slider.querySelector('.slider__dots');
 
   if (!track || slides.length === 0) return;
 
-  let index = 0;
+  let currentIndex = 0;
 
-  function updateSlider() {
-    // Обновляем точки на основе текущего индекса
-    dots.forEach((dot, dotIndex) => {
-      const icon = dot.querySelector('.slider__dot-icon');
-      if (dotIndex === index) {
-        if (icon) icon.src = 'assets/images/dot-active.svg';
+  // Создаем точки динамически на основе количества слайдов (только если контейнер пуст)
+  if (dotsContainer && dotsContainer.children.length === 0) {
+    slides.forEach((slide, index) => {
+      const dot = document.createElement('button');
+      dot.className = 'slider__dot';
+      dot.setAttribute('data-index', index);
+      dot.setAttribute('aria-label', `Перейти к слайду ${index + 1}`);
+      
+      const icon = document.createElement('img');
+      icon.className = 'slider__dot-icon';
+      icon.alt = '';
+      
+      if (index === 0) {
+        icon.src = 'assets/images/dot-active.svg';
         dot.classList.add('slider__dot--active');
       } else {
-        if (icon) icon.src = 'assets/images/dot-inactive.svg';
+        icon.src = 'assets/images/dot-inactive.svg';
+      }
+      
+      dot.appendChild(icon);
+      dotsContainer.appendChild(dot);
+    });
+  }
+
+  const dots = slider.querySelectorAll('.slider__dot');
+
+  // Обновление видимости стрелок и состояния точек
+  function updateControls() {
+    // Обновляем стрелки
+    if (currentIndex === 0) {
+      arrowLeft?.classList.add('slider__arrow--hidden');
+    } else {
+      arrowLeft?.classList.remove('slider__arrow--hidden');
+    }
+
+    if (currentIndex === slides.length - 1) {
+      arrowRight?.classList.add('slider__arrow--hidden');
+    } else {
+      arrowRight?.classList.remove('slider__arrow--hidden');
+    }
+
+    // Обновляем точки
+    dots.forEach((dot, index) => {
+      const icon = dot.querySelector('.slider__dot-icon');
+      if (index === currentIndex) {
+        icon.src = 'assets/images/dot-active.svg';
+        dot.classList.add('slider__dot--active');
+      } else {
+        icon.src = 'assets/images/dot-inactive.svg';
         dot.classList.remove('slider__dot--active');
       }
     });
-
-    // Обновляем видимость стрелок
-    if (index === 0) {
-      arrowLeft.style.opacity = '0';
-      arrowLeft.style.pointerEvents = 'none';
-    } else {
-      arrowLeft.style.opacity = '1';
-      arrowLeft.style.pointerEvents = 'auto';
-    }
-
-    if (index === slides.length - 1) {
-      arrowRight.style.opacity = '0';
-      arrowRight.style.pointerEvents = 'none';
-    } else {
-      arrowRight.style.opacity = '1';
-      arrowRight.style.pointerEvents = 'auto';
-    }
   }
 
   // Определение текущего индекса на основе скролла
@@ -49,55 +72,64 @@ document.addEventListener('DOMContentLoaded', function() {
     const slideWidth = track.clientWidth;
     const newIndex = Math.round(scrollLeft / slideWidth);
     
-    if (newIndex !== index && newIndex >= 0 && newIndex < slides.length) {
-      index = newIndex;
-      updateSlider();
+    if (newIndex !== currentIndex && newIndex >= 0 && newIndex < slides.length) {
+      currentIndex = newIndex;
+      updateControls();
     }
   }
 
-  // Переключение слайдов через scrollBy
-  function goToSlide(newIndex) {
-    index = Math.max(0, Math.min(newIndex, slides.length - 1));
+  // Переход к конкретному слайду
+  function goToSlide(index) {
+    if (index < 0 || index >= slides.length) return;
+    
     const slideWidth = track.clientWidth;
     track.scrollTo({
       left: index * slideWidth,
       behavior: 'smooth'
     });
-    updateSlider();
+    
+    // Обновляем индекс после начала скролла (будет синхронизирован через updateIndexFromScroll)
+    // Но сразу обновляем UI для мгновенной реакции
+    currentIndex = index;
+    updateControls();
   }
 
   // Обработчики стрелок
-  arrowLeft.addEventListener('click', function() {
-    if (index > 0) {
-      track.scrollBy({
-        left: -track.clientWidth,
-        behavior: 'smooth'
-      });
+  arrowLeft?.addEventListener('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    if (currentIndex > 0) {
+      goToSlide(currentIndex - 1);
     }
   });
 
-  arrowRight.addEventListener('click', function() {
-    if (index < slides.length - 1) {
-      track.scrollBy({
-        left: track.clientWidth,
-        behavior: 'smooth'
-      });
+  arrowRight?.addEventListener('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    if (currentIndex < slides.length - 1) {
+      goToSlide(currentIndex + 1);
     }
   });
 
   // Обработчики точек
-  dots.forEach((dot, dotIndex) => {
-    dot.addEventListener('click', function() {
-      goToSlide(dotIndex);
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      goToSlide(index);
     });
   });
 
-  // Синхронизация индекса при скролле (нативный свайп)
+  // Синхронизация индекса при нативном скролле
+  let scrollTimeout;
   track.addEventListener('scroll', function() {
-    updateIndexFromScroll();
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(function() {
+      updateIndexFromScroll();
+    }, 50);
   });
 
   // Инициализация
   updateIndexFromScroll();
-  updateSlider();
+  updateControls();
 });
