@@ -690,30 +690,25 @@ footer #f_phones a:hover {
 }
 .similar-projects__gallery {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--grid-gutter);
-  overflow-x: auto;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
   padding: 0;
   margin-top: 12px;
-  scrollbar-width: thin;
-  scrollbar-color: #C0C0C0 #f1f1f1;
   width: 100%;
   box-sizing: border-box;
 }
 .similar-projects__item {
-  flex: 0 0 auto;
+  flex: 0 0 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: calc(var(--grid-column-width) * 4 + var(--grid-gutter) * 3); /* 4 колонки + 3 gutters */
-  min-width: calc(var(--grid-column-width) * 4 + var(--grid-gutter) * 3);
   box-sizing: border-box;
+  margin-bottom: 12px;
+  width: 100%;
 }
 .similar-projects__item img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1;
+  width: 296px;
+  height: 296px;
   object-fit: cover;
   border-radius: 4px;
 }
@@ -724,20 +719,6 @@ footer #f_phones a:hover {
   color: #626161;
   margin-bottom: 0;
   width: 100%;
-}
-.similar-projects__gallery::-webkit-scrollbar {
-  height: 6px;
-}
-.similar-projects__gallery::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 3px;
-}
-.similar-projects__gallery::-webkit-scrollbar-thumb {
-  background: #C0C0C0;
-  border-radius: 3px;
-}
-.similar-projects__gallery::-webkit-scrollbar-thumb:hover {
-  background: #a0a0a0;
 }
 
 .similar-projects__show-more {
