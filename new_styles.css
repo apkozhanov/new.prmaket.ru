@@ -803,6 +803,39 @@ a:active {
 a:visited {
   color: #8CC540;
 }
+
+/* Стили для ссылки "Читать условия акции" с прерывистой линией */
+a.promotion-link,
+a[href*="акци"],
+a.dotted-link {
+  color: #8CC540;
+  text-decoration: none;
+  border-bottom: 1px dotted #8CC540;
+  display: inline;
+  transition: color 0.2s ease, border-bottom-color 0.2s ease;
+}
+
+a.promotion-link:hover,
+a[href*="акци"]:hover,
+a.dotted-link:hover {
+  color: #7ab330;
+  border-bottom-color: #7ab330;
+}
+
+a.promotion-link:visited,
+a[href*="акци"]:visited,
+a.dotted-link:visited {
+  color: #999;
+  border-bottom-color: #999;
+}
+
+a.promotion-link:active,
+a[href*="акци"]:active,
+a.dotted-link:active {
+  color: #6a9a20;
+  border-bottom-color: #6a9a20;
+}
+
 /* Мобильное меню */
 .m-menu {
   position: fixed;
@@ -1084,4 +1117,87 @@ a:visited {
   50% {
     transform: scale(1.05);
   }
+}
+
+/* Стили для раскрытия/скрытия характеристик - текстовая ссылка с линией */
+.characteristics-wrapper {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.characteristics-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-family: 'DIN Pro', 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  padding-bottom: 8px;
+  margin-bottom: 0;
+  position: relative;
+  box-sizing: border-box;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.characteristics-toggle:hover .characteristics-toggle__text {
+  color: #7ab330;
+  border-bottom-color: #7ab330;
+}
+
+.characteristics-toggle:hover .characteristics-toggle__arrow {
+  color: #7ab330;
+}
+
+.characteristics-toggle:active .characteristics-toggle__text {
+  color: #6a9a20;
+  border-bottom-color: #6a9a20;
+}
+
+.characteristics-toggle:active .characteristics-toggle__arrow {
+  color: #6a9a20;
+}
+
+.characteristics-toggle--clicked .characteristics-toggle__text {
+  color: #999;
+  border-bottom-color: #999;
+}
+
+.characteristics-toggle--clicked .characteristics-toggle__arrow {
+  color: #999;
+}
+
+.characteristics-toggle__text {
+  display: inline;
+  color: #8CC540;
+  border-bottom: 1px dotted #8CC540;
+  transition: color 0.2s ease, border-bottom-color 0.2s ease;
+}
+
+.characteristics-toggle__arrow {
+  display: inline;
+  margin-left: 4px;
+  color: #8CC540;
+  transition: color 0.2s ease;
+}
+
+.characteristics-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.16s ease;
+  margin: 0;
+  padding: 0;
+}
+
+.characteristics-content.characteristics-content--expanded {
+  max-height: 2000px;
+  padding-top: 12px;
+  margin-top: 0;
 }
