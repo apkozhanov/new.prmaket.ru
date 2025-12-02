@@ -1,5 +1,6 @@
 /* Плавающая кнопка связи для мобильных устройств */
 @media (max-width: 768px) {
+  /* --- Disabled for widths above 320px ---
   .floating-contact-btn {
     position: fixed;
     left: 16px;
@@ -52,12 +53,15 @@
       transform: scale(1.05);
     }
   }
+  --- End disabled block --- */
 }
 
 /* Скрываем на десктопе */
 @media (min-width: 769px) {
+  /* --- Disabled for widths above 320px ---
   .floating-contact-btn {
     display: none !important;
   }
+  --- End disabled block --- */
 }
 
