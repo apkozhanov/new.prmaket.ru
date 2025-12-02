@@ -25,23 +25,8 @@
     button.appendChild(icon1);
     button.appendChild(icon2);
     
-    // Добавляем обработчик клика
-    button.addEventListener('click', function() {
-      // Прокручиваем к началу страницы или к форме, если она есть
-      const contactElement = document.getElementById('contact');
-      if (contactElement) {
-        contactElement.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      } else {
-        // Если формы нет, прокручиваем к началу страницы
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-      }
-    });
+    // Обработчик клика будет добавлен в contact-modal.js
+    // Здесь оставляем только создание кнопки
     
     // Добавляем кнопку в body
     document.body.appendChild(button);

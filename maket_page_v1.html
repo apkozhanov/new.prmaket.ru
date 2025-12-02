@@ -13,6 +13,7 @@
     </script> 
     
     <link rel="stylesheet" href="new_styles.css" />
+    <link rel="stylesheet" href="assets/css/contact-modal.css" />
 
     <link rel="canonical" href="vendor/prmaket.ru/portfolio/houses/maket-zhk-maloohtinskiy" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -30,6 +31,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="assets/js/m-header-scroll.js" defer></script>
 <script src="assets/js/breadcrumbs.js" defer></script>
 <script src="assets/js/floating-contact.js" defer></script>
+<script src="assets/js/contact-modal.js" defer></script>
 <script src="assets/js/m-menu.js" defer></script>
 <script src="assets/js/slider.js" defer></script>
 <script src="assets/js/characteristics-toggle.js" defer></script>
@@ -161,7 +163,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <p>Макет Электростанции и ГДГ</p>
         </div>
     </div>
-    <button class="similar-projects__show-more">Показать еще</button>
+    <button class="m-btn m-btn-more">
+      Показать ещё <span class="m-btn-more__icon">→</span>
+    </button>
 </div>
     </main>
     </div><!-- .page --><!-- Yandex.Metrika counter -->
@@ -208,6 +212,83 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span itemprop="telephone">+7 812 985-44-54</span>,
         <span itemprop="email">info@prmaket.ru</span>
     </div>
+</div>
+
+<!-- Модальное окно связи -->
+<div id="contact-modal" class="contact-modal" aria-hidden="true">
+  <div class="contact-modal__overlay"></div>
+  <div class="contact-modal__content">
+    <!-- Шапка -->
+    <div class="contact-modal__header">
+      <div class="contact-modal__header-text">
+        <h2 class="contact-modal__title">Связаться с нами</h2>
+        <p class="contact-modal__subtitle">Выберите удобный способ — мы на связи.</p>
+      </div>
+      <button class="contact-modal__close" aria-label="Закрыть" type="button">
+        <span class="contact-modal__close-icon">×</span>
+      </button>
+    </div>
+
+    <!-- Блок мессенджеров -->
+    <div class="contact-modal__messengers">
+      <a href="#" class="contact-modal__messenger-btn" aria-label="Telegram" data-tracking="telegram">
+        <div class="contact-modal__messenger-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.16c-.169 1.858-.896 6.348-.896 6.348s-.053.39-.234.48c-.18.09-.448.06-.448.06l-3.2-2.01-1.584-1.09s-.21-.135-.21-.33c0-.195.21-.33.21-.33l2.432-2.28.48-3.84s.03-.24.21-.24c.18 0 .27.03.33.18.06.15.72 1.14 1.56 2.4 1.08 1.65 1.89 3.06 1.89 3.24 0 .18-.09.27-.18.33-.09.06-.42.24-1.02.48-.72.3-1.02.42-1.14.45-.24.06-.36.03-.36-.18 0-.24.48-2.88 1.38-4.08.09-.12.18-.18.18-.18s.03 0 .03.03c0 .06-.09.15-.18.27-.36.48-1.38 2.04-1.38 2.04s-.06.12-.06.18c0 .12.09.21.21.21.06 0 .12-.03.18-.06l2.4-1.44c.24-.15.48-.3.48-.3s.09-.06.15-.06c.06 0 .12.03.12.12 0 .09-.03.15-.03.21z" fill="#8CC540"/>
+          </svg>
+        </div>
+        <span class="contact-modal__messenger-label">Telegram</span>
+      </a>
+      <a href="#" class="contact-modal__messenger-btn" aria-label="WhatsApp" data-tracking="whatsapp">
+        <div class="contact-modal__messenger-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" fill="#8CC540"/>
+          </svg>
+        </div>
+        <span class="contact-modal__messenger-label">WhatsApp</span>
+      </a>
+      <a href="mailto:info@prmaket.ru" class="contact-modal__messenger-btn" aria-label="Email" data-tracking="email">
+        <div class="contact-modal__messenger-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="#8CC540"/>
+          </svg>
+        </div>
+        <span class="contact-modal__messenger-label">Email</span>
+      </a>
+    </div>
+
+    <!-- Форма обратной связи -->
+    <form class="contact-modal__form" id="contact-form">
+      <div class="contact-modal__form-group">
+        <input type="text" class="contact-modal__input" id="contact-name" name="name" placeholder="Имя" required>
+      </div>
+      <div class="contact-modal__form-group">
+        <input type="tel" class="contact-modal__input" id="contact-phone" name="phone" placeholder="Телефон" required>
+      </div>
+      <button type="submit" class="contact-modal__submit">Отправить</button>
+    </form>
+
+    <!-- Ссылка на калькулятор -->
+    <div class="contact-modal__calculator-link">
+      <a href="#" class="contact-modal__calculator-link-text">Калькулятор стоимости макета →</a>
+    </div>
+
+    <!-- Контактные данные -->
+    <div class="contact-modal__contacts">
+      <div class="contact-modal__contact-item">
+        <span class="contact-modal__contact-label">Телефон:</span>
+        <a href="tel:+78129233347" class="contact-modal__contact-value">8 (812) 923-33-47</a>
+      </div>
+      <div class="contact-modal__contact-item">
+        <span class="contact-modal__contact-label">Email:</span>
+        <a href="mailto:info@prmaket.ru" class="contact-modal__contact-value">info@prmaket.ru</a>
+      </div>
+      <div class="contact-modal__contact-item">
+        <span class="contact-modal__contact-label">Время работы:</span>
+        <span class="contact-modal__contact-value" id="working-hours">9:00–18:00 (GMT+3)</span>
+      </div>
+    </div>
+  </div>
 </div>
 
 </body>
