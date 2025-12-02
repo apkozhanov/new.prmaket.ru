@@ -1277,3 +1277,28 @@ a.dotted-link:active {
   color: #414142;
   border-color: #6D982F;
 }
+
+/* ============================================
+   БЛОК С ОПИСАНИЕМ МАКЕТА
+   ============================================ */
+.maket-description {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding: 0;
+}
+
+.maket-description p {
+  margin-bottom: 12px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #626161;
+  font-family: 'DIN Pro', sans-serif;
+  font-weight: 400;
+  text-align: left;
+}
+
+.maket-description p:last-child {
+  margin-bottom: 0;
+}
