@@ -338,9 +338,9 @@ main a:hover {
   width: 100%;
   text-transform: uppercase;
   padding: 7px 0;
-  font-size: 14px;
+  font-size: 22px;
   font-family: 'DIN Pro Condensed', 'DIN Pro', sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   margin-bottom: 15px;
   margin-left: 0;
 }
@@ -861,7 +861,7 @@ footer #f_phones a:hover {
 .examples-section__title {
   font-family: 'DIN Pro Condensed', 'DIN Pro', sans-serif;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 22px;
   color: #414142;
   margin: 0 0 12px 0;
   text-align: left;
@@ -1023,10 +1023,22 @@ footer #f_phones a:hover {
 .layouts-section__title {
   font-family: 'DIN Pro Condensed', 'DIN Pro', sans-serif;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 22px;
   color: #414142;
   margin: 0 0 8px 0;
   text-align: left;
+}
+
+.layouts-section__intro {
+  font-family: 'DIN Pro', 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #626161;
+  margin: 0 0 20px 0;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .layouts-section__subtitle {
@@ -1034,14 +1046,14 @@ footer #f_phones a:hover {
   font-weight: 400;
   font-size: 16px;
   color: #414142;
-  margin: 0 0 12px 0;
+  margin: 0 0 0 0;
   text-align: left;
 }
 
 .layouts-section__image-wrapper {
   width: 100%;
   max-width: 297px;
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
   display: flex;
   justify-content: center;
 }
@@ -1206,10 +1218,11 @@ a.dotted-link:active {
   flex: 0 0 100%;
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   overflow: hidden;
   scroll-snap-align: start;
+  box-sizing: border-box;
 }
 
 .slider__image {
@@ -1218,6 +1231,7 @@ a.dotted-link:active {
   display: block;
   object-fit: cover;
   object-position: center;
+  flex-shrink: 0;
 }
 
 /* Стрелки навигации */
@@ -1274,15 +1288,17 @@ a.dotted-link:active {
   justify-content: center;
   align-items: center;
   gap: 13px;
-  width: 110px;
+  min-width: 110px;
+  width: auto;
   height: 30px;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
   border-radius: 999px;
-  padding: 0;
+  padding: 0 16px;
   margin: 0;
   z-index: 10;
+  box-sizing: border-box;
 }
 
 .slider__dot {
@@ -1307,6 +1323,56 @@ a.dotted-link:active {
 .slider__dot:not(.slider__dot--active) .slider__dot-icon {
   width: 10px;
   height: 10px;
+}
+
+/* Контент слайда с заголовком */
+.slider__slide-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 297px;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.slider__slide-title {
+  font-family: 'DIN Pro', 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #414142;
+  margin: 0 0 12px 0;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* Заголовок секции "Виды подсветки" */
+.lighting-section__title {
+  font-family: 'DIN Pro Condensed', 'DIN Pro', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #414142;
+  margin: 20px 0 12px 0;
+  text-align: left;
+  width: 100%;
+  max-width: var(--grid-content-width);
+  box-sizing: border-box;
+}
+
+.lighting-section__intro {
+  font-family: 'DIN Pro', 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #626161;
+  margin: 0 0 12px 0;
+  text-align: left;
+  width: 100%;
+  max-width: var(--grid-content-width);
+  box-sizing: border-box;
 }
 
 /* Breadcrumbs для мобильной версии */

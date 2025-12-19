@@ -1,16 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const slider = document.querySelector('.slider');
-  if (!slider) return;
+  const sliders = document.querySelectorAll('.slider');
+  if (sliders.length === 0) return;
 
-  const track = slider.querySelector('.slider__track');
-  const slides = slider.querySelectorAll('.slider__slide');
-  const arrowLeft = slider.querySelector('.slider__arrow--left');
-  const arrowRight = slider.querySelector('.slider__arrow--right');
-  const dotsContainer = slider.querySelector('.slider__dots');
+  // Инициализируем каждый слайдер отдельно
+  sliders.forEach(function(slider) {
+    initSlider(slider);
+  });
 
-  if (!track || slides.length === 0) return;
+  function initSlider(slider) {
+    const track = slider.querySelector('.slider__track');
+    const slides = slider.querySelectorAll('.slider__slide');
+    const arrowLeft = slider.querySelector('.slider__arrow--left');
+    const arrowRight = slider.querySelector('.slider__arrow--right');
+    const dotsContainer = slider.querySelector('.slider__dots');
 
-  let currentIndex = 0;
+    if (!track || slides.length === 0) return;
+
+    let currentIndex = 0;
 
   // Создаем точки динамически на основе количества слайдов (только если контейнер пуст)
   if (dotsContainer && dotsContainer.children.length === 0) {
@@ -129,7 +135,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 50);
   });
 
-  // Инициализация
-  updateIndexFromScroll();
-  updateControls();
+    // Инициализация
+    updateIndexFromScroll();
+    updateControls();
+  }
 });
