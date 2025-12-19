@@ -935,6 +935,125 @@ footer #f_phones a:hover {
   line-height: 1.4;
 }
 
+/* CTA-карточка в слайдере */
+.examples-slider__card--cta {
+  flex: 0 0 235px;
+  width: 235px;
+  height: 235px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.examples-slider__cta-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  text-align: center;
+}
+
+.examples-slider__cta-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.examples-slider__cta-title span {
+  font-family: "DIN Pro", "Trebuchet MS", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #8CC540;
+  line-height: 1.2;
+  display: block;
+}
+
+.examples-slider__cta-subtitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.examples-slider__cta-subtitle span {
+  font-family: "DIN Pro", "Trebuchet MS", sans-serif;
+  font-size: 14px;
+  color: #414142;
+  opacity: 0.7;
+  line-height: 1.3;
+  display: block;
+}
+
+.examples-slider__cta-arrow {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  font-size: 24px;
+  color: #8CC540;
+  line-height: 1;
+  font-family: "DIN Pro", "Trebuchet MS", sans-serif;
+}
+
+.examples-slider__card--cta:hover {
+  background-color: #F8F8F8;
+}
+
+.examples-slider__card--cta:hover .examples-slider__cta-title span,
+.examples-slider__card--cta:hover .examples-slider__cta-arrow {
+  color: #7AAE37;
+}
+
+/* Блок "Варианты отображения планировок" */
+.layouts-section {
+  width: 100%;
+  max-width: var(--grid-content-width);
+  margin-top: 24px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+}
+
+.layouts-section__title {
+  font-family: 'DIN Pro Condensed', 'DIN Pro', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #414142;
+  margin: 0 0 8px 0;
+  text-align: left;
+}
+
+.layouts-section__subtitle {
+  font-family: 'DIN Pro', 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #414142;
+  margin: 0 0 12px 0;
+  text-align: left;
+}
+
+.layouts-section__image-wrapper {
+  width: 100%;
+  max-width: 297px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.layouts-section__image {
+  width: 297px;
+  height: 396px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
 /* Базовые стили для всех ссылок */
 a {
   color: #8CC540;
