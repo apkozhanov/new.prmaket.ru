@@ -1375,6 +1375,76 @@ a.dotted-link:active {
   box-sizing: border-box;
 }
 
+/* Блок "Способы управления подсветкой" */
+.control-methods-section {
+  width: 100%;
+  max-width: var(--grid-content-width);
+  margin-top: 24px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+}
+
+.control-methods-section__title {
+  font-family: 'DIN Pro Condensed', 'DIN Pro', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #414142;
+  margin: 0 0 12px 0;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Чипы управления используют стандартные классы chip-tag--primary и chip-tag--secondary */
+
+/* Контент способа управления */
+.control-method-content {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 12px;
+}
+
+.control-method-content__subtitle {
+  font-family: 'DIN Pro', 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #414142;
+  margin: 0 0 12px 0;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.control-method-content__description {
+  font-family: 'DIN Pro', 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #626161;
+  margin: 12px 0 0 0;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.control-method-content__image-wrapper {
+  width: 100%;
+  max-width: 297px;
+  margin: 0 auto 12px auto;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.control-method-content__image {
+  width: 297px;
+  height: 396px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  box-sizing: border-box;
+}
+
 /* Breadcrumbs для мобильной версии */
 #breadcrumbs_container {
   margin-top: 74px;

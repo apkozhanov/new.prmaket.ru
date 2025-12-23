@@ -35,6 +35,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="assets/js/m-menu.js" defer></script>
 <script src="assets/js/slider.js" defer></script>
 <script src="assets/js/characteristics-toggle.js" defer></script>
+<script src="assets/js/control-methods.js" defer></script>
   
 <body>
 <div id="page">
@@ -235,6 +236,74 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- Точки будут созданы автоматически через JS -->
       </div>
     </div>
+  </div>
+</div>
+
+<!-- Блок "Способы управления подсветкой" -->
+<div class="control-methods-section">
+  <h2 class="control-methods-section__title">Способы управления подсветкой</h2>
+  
+  <div class="chip-tags">
+    <button class="chip-tag chip-tag--primary" data-control="tablet">
+      Планшет
+    </button>
+    <button class="chip-tag chip-tag--secondary" data-control="controller">
+      Контролер
+    </button>
+    <button class="chip-tag chip-tag--secondary" data-control="buttons">
+      Кнопки
+    </button>
+    <button class="chip-tag chip-tag--secondary" data-control="app">
+      Приложение
+    </button>
+    <button class="chip-tag chip-tag--secondary" data-control="remote">
+      Пульт
+    </button>
+  </div>
+
+  <!-- Контент для Планшета -->
+  <div class="control-method-content" data-content="tablet">
+    <h3 class="control-method-content__subtitle">Внешний планшет (тачскрин)</h3>
+    <div class="control-method-content__image-wrapper">
+      <img src="https://prmaket.ru/files/items/s267_4e3484bca75741b616add35c1ea13f766.jpg" alt="Внешний планшет (тачскрин)" class="control-method-content__image">
+    </div>
+    <p class="control-method-content__description">Сенсорный экран для ручного управления подсветкой отдельных элементов или выбора готовых сценариев работы.</p>
+  </div>
+
+  <!-- Контент для Контроллера -->
+  <div class="control-method-content" data-content="controller" style="display: none;">
+    <h3 class="control-method-content__subtitle">Контроллер с предустановленным сценарием</h3>
+    <div class="control-method-content__image-wrapper">
+      <img src="https://prmaket.ru/files/items/s251_170c4584ff3603592434afc7374c7076e.jpg" alt="Контроллер с предустановленным сценарием" class="control-method-content__image">
+    </div>
+    <p class="control-method-content__description">Автоматическая смена режимов подсветки по времени: день → вечер → ночь, без участия пользователя.</p>
+  </div>
+
+  <!-- Контент для Кнопок -->
+  <div class="control-method-content" data-content="buttons" style="display: none;">
+    <h3 class="control-method-content__subtitle">Кнопки на стенде</h3>
+    <div class="control-method-content__image-wrapper">
+      <img src="https://prmaket.ru/files/items/s210_1b092636c6a67cdf1c49b27cf503791c7.jpg" alt="Кнопки на стенде" class="control-method-content__image">
+    </div>
+    <p class="control-method-content__description">Физические кнопки, которые включают подсветку отдельных зон или переключают сценарии.</p>
+  </div>
+
+  <!-- Контент для Приложения -->
+  <div class="control-method-content" data-content="app" style="display: none;">
+    <h3 class="control-method-content__subtitle">Приложение на смартфоне</h3>
+    <div class="control-method-content__image-wrapper">
+      <img src="https://resizer.mail.ru/p/5ca184a7-b9f1-5788-a523-023f2f5019c1/dpr:129/AQAKAmQ9F-W7pFA8TZvVxCh-Hg9_vsDIzKGUHSUxabcix3syWhy4xSR3zAWr99qDt_PitX_gkhO59PVeeXW2ddXkILA.webp" alt="Приложение на смартфоне" class="control-method-content__image">
+    </div>
+    <p class="control-method-content__description">Управление подсветкой через мобильные приложения умного дома: выбор зон, цветов и сценариев.</p>
+  </div>
+
+  <!-- Контент для Пульта -->
+  <div class="control-method-content" data-content="remote" style="display: none;">
+    <h3 class="control-method-content__subtitle">Пульт дистанционного управления</h3>
+    <div class="control-method-content__image-wrapper">
+      <img src="https://avatars.mds.yandex.net/get-mpic/14664243/2a00000197f86a7fa79afbfe7087796c5743/orig" alt="Пульт дистанционного управления" class="control-method-content__image">
+    </div>
+    <p class="control-method-content__description">Компактный пульт, аналогичный телевизионному, для активации подсветки зон и переключения режимов.</p>
   </div>
 </div>
 
