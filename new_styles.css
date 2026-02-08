@@ -751,6 +751,48 @@ footer #f_phones a:hover {
   object-fit: cover;
   border-radius: 4px;
 }
+.similar-projects__image-wrap {
+  position: relative;
+  display: block;
+  line-height: 0;
+  background: transparent;
+  overflow: visible;
+}
+.similar-projects__image-wrap img:not(.similar-projects__tag) {
+  width: 296px;
+  height: 296px;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+/* Тэги — ряд из 4 иконок: отступ 12px от верха и слева, каждая следующая смещена влево на 12px */
+.similar-projects__item .similar-projects__tag {
+  position: absolute;
+  top: 12px;
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  max-width: 52px;
+  object-fit: none;
+  background: transparent;
+}
+/* Порядок слева направо: popular → new → premium → vip. Самый правый (vip) — 12px от правой грани изображения (296px) */
+.similar-projects__item .similar-projects__tag--popular {
+  left: 196px;
+  z-index: 4;
+}
+.similar-projects__item .similar-projects__tag--new {
+  left: 208px;
+  z-index: 3;
+}
+.similar-projects__item .similar-projects__tag--premium {
+  left: 220px;
+  z-index: 2;
+}
+.similar-projects__item .similar-projects__tag--vip {
+  left: 232px;
+  z-index: 1;
+}
 .similar-projects__item p {
   margin-top: 8px;
   font-size: 13px;
@@ -758,6 +800,34 @@ footer #f_phones a:hover {
   color: #626161;
   margin-bottom: 0;
   width: 100%;
+}
+
+/* Стиль заголовка и подзаголовка карточек как в блоке «Примеры работ» */
+.similar-projects__item .examples-slider__content {
+  margin-top: 8px;
+  text-align: center;
+}
+.similar-projects__item .examples-slider__title-link {
+  display: block;
+  font-family: "DIN Pro", "Trebuchet MS", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #8CC540;
+  text-decoration: none;
+  margin-bottom: 4px;
+  transition: color 0.2s ease;
+}
+.similar-projects__item .examples-slider__title-link:hover {
+  color: #7AAE37;
+  text-decoration: underline;
+}
+.similar-projects__item .examples-slider__subtitle {
+  font-family: "DIN Pro", "Trebuchet MS", sans-serif;
+  font-size: 13px;
+  color: #414142;
+  opacity: 0.7;
+  margin: 0;
+  line-height: 1.4;
 }
 
 .m-btn-more {
