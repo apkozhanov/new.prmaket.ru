@@ -336,10 +336,8 @@
   color: #7ab330;
 }
 
-/* Блокировка скролла фона */
+/* Блокировка скролла фона (без position: fixed — сохраняет позицию скролла) */
 body.contact-modal-open {
   overflow: hidden;
-  position: fixed;
-  width: 100%;
 }
 

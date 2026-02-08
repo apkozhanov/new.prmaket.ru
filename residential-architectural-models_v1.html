@@ -14,6 +14,7 @@
     
     <link rel="stylesheet" href="new_styles.css" />
     <link rel="stylesheet" href="assets/css/contact-modal.css" />
+    <link rel="stylesheet" href="assets/css/badges-modal.css" />
 
     <link rel="canonical" href="vendor/prmaket.ru/portfolio/houses/maket-zhk-maloohtinskiy" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -36,6 +37,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="assets/js/slider.js" defer></script>
 <script src="assets/js/characteristics-toggle.js" defer></script>
 <script src="assets/js/control-methods.js" defer></script>
+<script src="assets/js/badges-modal.js" defer></script>
   
 <body>
 <div id="page">
@@ -344,7 +346,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
     <div class="similar-projects__gallery">
         <div class="similar-projects__item">
-            <div class="similar-projects__image-wrap">
+            <div class="similar-projects__image-wrap" data-badges="popular,new,premium,vip">
                 <img src="assets/images/popular_tag.png" alt="Популярный" class="similar-projects__tag similar-projects__tag--popular" />
                 <img src="assets/images/new_tag.png" alt="Новинка" class="similar-projects__tag similar-projects__tag--new" />
                 <img src="assets/images/premium_tag.png" alt="Премиум" class="similar-projects__tag similar-projects__tag--premium" />
@@ -508,6 +510,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="contact-modal__contact-item">
         <span class="contact-modal__contact-label">Время работы:</span>
         <span class="contact-modal__contact-value" id="working-hours">9:00–18:00 (GMT+3)</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Модальное окно справки по меткам проекта -->
+<div id="badges-modal" class="badges-modal" aria-hidden="true">
+  <div class="badges-modal__overlay"></div>
+  <div class="badges-modal__content">
+    <div class="badges-modal__header">
+      <h2 class="badges-modal__title">Что означают метки проекта?</h2>
+      <button class="badges-modal__close" aria-label="Закрыть" type="button">
+        <span class="badges-modal__close-icon">×</span>
+      </button>
+    </div>
+    <div class="badges-modal__list">
+      <div class="badges-modal__item" data-badge="new">
+        <div class="badges-modal__icon-wrap">
+          <img src="assets/images/new_tag.png" alt="NEW" class="badges-modal__icon" />
+        </div>
+        <p class="badges-modal__text">Создан за последние 2 месяца.</p>
+      </div>
+      <div class="badges-modal__item" data-badge="vip">
+        <div class="badges-modal__icon-wrap">
+          <img src="assets/images/vip_tag.png" alt="VIP" class="badges-modal__icon" />
+        </div>
+        <p class="badges-modal__text">Демонстрировался первым лицам государства и чиновникам высшего уровня (министры, губернаторы).</p>
+      </div>
+      <div class="badges-modal__item" data-badge="popular">
+        <div class="badges-modal__icon-wrap">
+          <img src="assets/images/popular_tag.png" alt="Popular" class="badges-modal__icon" />
+        </div>
+        <p class="badges-modal__text">Входит в число самых просматриваемых по внутренней статистике.</p>
+      </div>
+      <div class="badges-modal__item" data-badge="premium">
+        <div class="badges-modal__icon-wrap">
+          <img src="assets/images/premium_tag.png" alt="Premium" class="badges-modal__icon" />
+        </div>
+        <p class="badges-modal__text">Содержит продвинутые функции: управление (например, с планшета) и сценарии подсветки/механизации.</p>
       </div>
     </div>
   </div>

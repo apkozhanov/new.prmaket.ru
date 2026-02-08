@@ -744,6 +744,14 @@ footer #f_phones a:hover {
   box-sizing: border-box;
   margin-bottom: 12px;
   width: 100%;
+  /* Рамка и подложка карточки (мобильная версия): без изменения размеров */
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.04),
+    inset 0 0 0 1px rgba(65, 65, 66, 0.14);
+  padding-bottom: 16px;
 }
 .similar-projects__item img {
   width: 296px;

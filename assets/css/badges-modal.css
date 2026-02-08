@@ -1,0 +1,152 @@
+/* ============================================
+   МОДАЛЬНОЕ ОКНО СПРАВКИ ПО МЕТКАМ ПРОЕКТА
+   Стиль как у contact-modal (320px)
+   ============================================ */
+
+.badges-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  pointer-events: none;
+}
+
+.badges-modal.badges-modal--open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.badges-modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+}
+
+.badges-modal__content {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  max-height: 90vh;
+  background: #FFFFFF;
+  border-radius: 24px 24px 0 0;
+  padding: 20px 16px 24px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  z-index: 1;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.badges-modal--open .badges-modal__content {
+  transform: translateY(0);
+}
+
+.badges-modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.badges-modal__title {
+  flex: 1;
+  font-family: 'DIN Pro Condensed', 'DIN Pro', 'Trebuchet MS', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #414142;
+  margin: 0;
+  padding-right: 12px;
+  text-transform: uppercase;
+}
+
+.badges-modal__close {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: opacity 0.2s ease;
+}
+
+.badges-modal__close:hover {
+  opacity: 0.7;
+}
+
+.badges-modal__close:active {
+  opacity: 0.5;
+}
+
+.badges-modal__close-icon {
+  font-family: 'DIN Pro', 'Trebuchet MS', sans-serif;
+  font-size: 28px;
+  line-height: 1;
+  color: #414142;
+  font-weight: 300;
+}
+
+.badges-modal__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.badges-modal__item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.badges-modal__icon-wrap {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+}
+
+.badges-modal__icon {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Неактивные иконки: grayscale + opacity 0.4 */
+.badges-modal__item.badges-modal__item--inactive .badges-modal__icon {
+  filter: grayscale(100%);
+  opacity: 0.4;
+}
+
+.badges-modal__text {
+  font-family: 'DIN Pro', 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #414142;
+  margin: 0;
+  padding-top: 4px;
+}
+
+/* Блокировка скролла фона (без position: fixed — сохраняет позицию скролла) */
+body.badges-modal-open {
+  overflow: hidden;
+}
