@@ -160,9 +160,12 @@
   background: #E8E8E8;
 }
 
-.contact-modal__messenger-icon svg {
+.contact-modal__messenger-icon svg,
+.contact-modal__messenger-icon .contact-modal__messenger-img {
   width: 24px;
   height: 24px;
+  display: block;
+  object-fit: contain;
 }
 
 .contact-modal__messenger-label {

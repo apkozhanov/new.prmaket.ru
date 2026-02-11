@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <!-- Синий круг — фон логотипа Telegram (логотип помещается с отступом) -->
+  <circle cx="12" cy="12" r="12" fill="#26A5E4"/>
+  <!-- Белый наклонённый самолётик, уменьшен для свободного поля внутри круга -->
+  <g transform="translate(12,12) scale(0.62) translate(-12,-12)">
+    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" fill="white" transform="rotate(-45 12 12)"/>
+  </g>
+</svg>
