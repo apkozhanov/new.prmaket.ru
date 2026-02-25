@@ -282,11 +282,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function renderModalFilters() {
     sheetContentEl.innerHTML = '';
+    var collapsedByDefault = {
+      material: true,
+      sizeX: true,
+      sizeY: true,
+      scale: true,
+      city: true
+    };
 
     filterConfig.forEach(function (category) {
       var details = document.createElement('details');
       details.className = 'filters-sheet__section';
-      details.open = true;
+      details.open = !collapsedByDefault[category.id];
 
       var summary = document.createElement('summary');
       summary.className = 'filters-sheet__summary';
