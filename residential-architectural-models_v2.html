@@ -41,6 +41,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="assets/js/characteristics-toggle.js" defer></script>
 <script src="assets/js/control-methods.js" defer></script>
 <script src="assets/js/badges-modal.js" defer></script>
+<script src="assets/js/similar-projects-filter.js" defer></script>
+<script src="assets/js/portfolio-scroll.js" defer></script>
   
 <body>
 <div id="page">
@@ -111,10 +113,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- Кнопки действий -->
 <div class="action-buttons">
-  <button class="m-btn m-btn-more">
+  <button class="m-btn m-btn-more" type="button" data-open-contact-modal>
     Рассчитать стоимость
   </button>
-  <button class="m-btn m-btn-submit">
+  <button class="m-btn m-btn-submit" type="button" data-scroll-target="portfolio-block">
     Портфолио
   </button>
 </div>
@@ -312,43 +314,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
 </div>
 
-<!-- Блок с описанием макета -->
-<div class="maket-description">
-  <p>Макет ЖК «Малоохтинский 68» создан в масштабе 1:125 и передаёт атмосферу современного городского квартала с его плотной, но аккуратной застройкой. На модели хорошо читаются разные высоты корпусов, геометрия дворов и характерное благоустройство — всё это собрано в крупном формате 2400 × 1500 мм, чтобы комплекс смотрелся цельно и выразительно.</p>
-  <p>Мы использовали 3D-печать, фрезеровку и ручную сборку, чтобы добиться высокого уровня детализации. Отдельного внимания заслуживает подсветка: внутри домов и по фасадам работает мягкий тёплый свет, создающий ощущение живого пространства даже в миниатюре.</p>
-  <p>Макет оснащён управлением на стенде — можно включать разные световые сценарии и использовать модель для презентаций, экспозиций и работы с покупателями.</p>
-</div>
-
-<div class="characteristics-wrapper">
-  <button class="characteristics-toggle" type="button" aria-expanded="false">
-    <span class="characteristics-toggle__text">Подробные характеристики</span>
-    <span class="characteristics-toggle__arrow">▾</span>
-  </button>
-  <div class="characteristics-content">
-    <div class="portfolio_text">
-      <p><strong>Тип макета</strong> — <a href="#tip-maketa">Макеты ЖК</a></p>
-      <p><strong>Масштаб</strong> — <a href="#masshtab">1:125</a></p>
-      <p><strong>Габаритные размеры</strong> — 2400 х 1500 мм</p>
-      <p><strong>Срок изготовления макета</strong> — <a href="#srok">2,5 месяца</a></p>
-      <p><strong>Теги</strong> — <a href="#arhitekturnye-makety">Архитектурные макеты</a>, <a href="#makety-zdaniy">Макеты зданий</a>, <a href="#maket-doma">Макет Дома</a>, <a href="#miniatyura-doma">Минитаюра дома</a>, <a href="#miniatyura-zdaniya">Миниатюра здания</a></p>
-      <p><strong>Город</strong> — <a href="#gorod">Санкт-Петербург</a></p>
-      <p><strong>Детализация</strong> — <a href="#detalizaciya">высокая</a></p>
-      <p><strong>Основной материал</strong> — <a href="#material">акрил</a></p>
-      <p><strong>Технологии</strong> — <a href="#3d-pechat">3d-печать</a>, <a href="#frezerrnaa-rezka">фрезеррная резка</a></p>
-      <p><strong>Подсветка</strong> — <a href="#podsvetka-vnutri-domov">Подсветка внутри домов</a>, <a href="#fonari">Фонари</a>, <a href="#podsvetka-fasadov">подсветка фасадов</a></p>
-      <p><strong>Управление</strong> — <a href="#upravlenie">На стенде</a></p>
-      <p><strong>Категория стоимости</strong> — <a href="#kategoriya-stoimosti">средняя</a></p>
-      <p><strong>Дата изготовления</strong> — октябрь 2023</p>
-    </div>
-  </div>
-</div>
-
-<div class="similar-projects">
+<div id="portfolio-block" class="similar-projects" data-default-state='{"type":["makety-zhk"]}'>
     <div class="name_main">
-        <h2>Похожие проекты</h2>
+        <h2>Проектов в портфолио: 116</h2>
+    </div>
+    <div class="similar-projects__filters-toolbar">
+      <div class="similar-projects__quick-filters" data-quick-filters aria-label="Быстрые фильтры по типу"></div>
+      <button class="m-btn m-btn-submit similar-projects__open-filters" type="button" data-open-filters>Показать фильтры</button>
+    </div>
+    <div class="similar-projects__active-filters" data-active-filters hidden></div>
+    <div class="similar-projects__hidden-field-wrap">
+      <input type="hidden" name="portfolio_filter" value="" />
     </div>
     <div class="similar-projects__gallery">
-        <div class="similar-projects__item">
+        <div class="similar-projects__item" data-filter='{"type":["promyshlennye-makety"],"material":["akril"],"sizeX":2400,"sizeY":1500,"scale":125,"termMonths":3,"city":["spb"],"detail":["high"],"lighting":["inside","lanterns","facades"],"control":["stand","tablet"],"madeAtMonth":"2023-10"}'>
             <div class="similar-projects__image-wrap" data-badges="popular,new,premium,vip">
                 <img src="assets/images/popular_tag.png" alt="Популярный" class="similar-projects__tag similar-projects__tag--popular" />
                 <img src="assets/images/new_tag.png" alt="Новинка" class="similar-projects__tag similar-projects__tag--new" />
@@ -361,38 +340,56 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <p class="examples-slider__subtitle">Промышленные макеты</p>
             </div>
         </div>
-        <div class="similar-projects__item">
+        <div class="similar-projects__item" data-filter='{"type":["makety-zhk","arhitekturnye-makety"],"material":["akril"],"sizeX":2200,"sizeY":1400,"scale":100,"termMonths":4,"city":["moskva"],"detail":["medium"],"lighting":["facades"],"control":["stand","app"],"madeAtMonth":"2024-02"}'>
+            <img src="https://prmaket.ru/files/items/s341f675c8833f7586bcba5c9e208a60382a.jpg" alt="Макет Электростанции и ГДГ" />
+            <div class="examples-slider__content">
+              <a href="#" class="examples-slider__title-link">Макет Электростанции и ГДГ</a>
+              <p class="examples-slider__subtitle">Макеты ЖК</p>
+            </div>
+        </div>
+        <div class="similar-projects__item" data-filter='{"type":["makety-domov","arhitekturnye-makety"],"material":["akril","massiv-dereva"],"sizeX":1800,"sizeY":1200,"scale":75,"termMonths":2,"city":["yaroslavl"],"detail":["high"],"lighting":["inside"],"control":["remote"],"madeAtMonth":"2022-11"}'>
+            <img src="https://prmaket.ru/files/items/s341f675c8833f7586bcba5c9e208a60382a.jpg" alt="Макет Электростанции и ГДГ" />
+            <div class="examples-slider__content">
+              <a href="#" class="examples-slider__title-link">Макет Электростанции и ГДГ</a>
+              <p class="examples-slider__subtitle">Макеты домов</p>
+            </div>
+        </div>
+        <div class="similar-projects__item" data-filter='{"type":["promyshlennye-makety"],"material":["akril"],"sizeX":2600,"sizeY":1600,"scale":150,"termMonths":5,"city":["spb"],"detail":["low"],"lighting":["lanterns"],"control":["tablet"],"madeAtMonth":"2021-06"}'>
             <img src="https://prmaket.ru/files/items/s341f675c8833f7586bcba5c9e208a60382a.jpg" alt="Макет Электростанции и ГДГ" />
             <div class="examples-slider__content">
               <a href="#" class="examples-slider__title-link">Макет Электростанции и ГДГ</a>
               <p class="examples-slider__subtitle">Промышленные макеты</p>
             </div>
         </div>
-        <div class="similar-projects__item">
+        <div class="similar-projects__item" data-filter='{"type":["makety-zhk","makety-domov"],"material":["massiv-dereva"],"sizeX":2000,"sizeY":1300,"scale":125,"termMonths":6,"city":["moskva"],"detail":["medium"],"lighting":["inside","facades"],"control":["stand","remote"],"madeAtMonth":"2025-01"}'>
             <img src="https://prmaket.ru/files/items/s341f675c8833f7586bcba5c9e208a60382a.jpg" alt="Макет Электростанции и ГДГ" />
             <div class="examples-slider__content">
               <a href="#" class="examples-slider__title-link">Макет Электростанции и ГДГ</a>
-              <p class="examples-slider__subtitle">Промышленные макеты</p>
-            </div>
-        </div>
-        <div class="similar-projects__item">
-            <img src="https://prmaket.ru/files/items/s341f675c8833f7586bcba5c9e208a60382a.jpg" alt="Макет Электростанции и ГДГ" />
-            <div class="examples-slider__content">
-              <a href="#" class="examples-slider__title-link">Макет Электростанции и ГДГ</a>
-              <p class="examples-slider__subtitle">Промышленные макеты</p>
-            </div>
-        </div>
-        <div class="similar-projects__item">
-            <img src="https://prmaket.ru/files/items/s341f675c8833f7586bcba5c9e208a60382a.jpg" alt="Макет Электростанции и ГДГ" />
-            <div class="examples-slider__content">
-              <a href="#" class="examples-slider__title-link">Макет Электростанции и ГДГ</a>
-              <p class="examples-slider__subtitle">Промышленные макеты</p>
+              <p class="examples-slider__subtitle">Архитектурные макеты</p>
             </div>
         </div>
     </div>
-    <button class="m-btn m-btn-more">
+    <div class="similar-projects__empty" hidden>
+      <button class="m-btn m-btn-more similar-projects__reset" type="button">Сбросить фильтры</button>
+    </div>
+    <button class="m-btn m-btn-more similar-projects__more">
       Показать ещё
     </button>
+    <div class="filters-sheet" id="similar-filters-sheet" aria-hidden="true">
+      <div class="filters-sheet__overlay" data-filters-close></div>
+      <section class="filters-sheet__panel" role="dialog" aria-modal="true" aria-labelledby="similar-filters-title">
+        <div class="filters-sheet__handle" aria-hidden="true"></div>
+        <header class="filters-sheet__header">
+          <h3 id="similar-filters-title">Все фильтры</h3>
+          <button class="filters-sheet__close" type="button" aria-label="Закрыть фильтры" data-filters-close>×</button>
+        </header>
+        <div class="filters-sheet__content" data-filters-content></div>
+        <footer class="filters-sheet__footer">
+          <button class="m-btn m-btn-more filters-sheet__reset" type="button" data-filters-reset>Сбросить фильтры</button>
+          <button class="m-btn m-btn-submit filters-sheet__done" type="button" data-filters-apply data-filters-close>Показать макеты (0)</button>
+        </footer>
+      </section>
+    </div>
 </div>
     </main>
     </div><!-- .page --><!-- Yandex.Metrika counter -->
@@ -555,4 +552,3 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </body>
 </html>
-

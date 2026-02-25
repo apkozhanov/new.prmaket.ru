@@ -3,7 +3,6 @@
 
   // Получаем элементы
   const modal = document.getElementById('contact-modal');
-  const openButton = document.querySelector('.floating-contact-btn');
   const closeButton = document.querySelector('.contact-modal__close');
   const overlay = document.querySelector('.contact-modal__overlay');
   const form = document.getElementById('contact-form');
@@ -69,20 +68,21 @@
   // Инициализация
   function init() {
     if (!modal) return;
+    const openButtons = Array.from(document.querySelectorAll('.floating-contact-btn, [data-open-contact-modal]'));
     
     // Обновляем время работы
     if (workingHoursElement) {
       updateWorkingHours();
     }
     
-    // Обработчик открытия модального окна
-    if (openButton) {
+    // Обработчики открытия модального окна
+    openButtons.forEach(function(openButton) {
       openButton.addEventListener('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
         openModal();
       });
-    }
+    });
     
     // Обработчик закрытия по кнопке
     if (closeButton) {
@@ -122,4 +122,3 @@
     init();
   }
 })();
-
