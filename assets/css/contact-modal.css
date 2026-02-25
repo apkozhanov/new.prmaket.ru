@@ -168,6 +168,29 @@
   object-fit: contain;
 }
 
+.contact-modal__messenger-icon--brand {
+  background: transparent;
+}
+
+.contact-modal__messenger-btn:hover .contact-modal__messenger-icon--brand {
+  background: transparent;
+}
+
+.contact-modal__messenger-icon .contact-modal__messenger-img--telegram {
+  width: 56px;
+  height: 56px;
+}
+
+.contact-modal__messenger-icon .contact-modal__messenger-img--whatsapp {
+  width: 67px;
+  height: 67px;
+}
+
+.contact-modal__messenger-icon .contact-modal__messenger-img--email {
+  width: 56px;
+  height: 56px;
+}
+
 .contact-modal__messenger-label {
   font-family: 'DIN Pro', 'Trebuchet MS', sans-serif;
   font-weight: 400;
@@ -247,15 +270,18 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  height: 50px;
+  min-height: 50px;
+  margin: 0;
   background: #8CC540;
   border: none;
-  border-radius: 12px;
+  border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  padding: 12px 24px;
+  padding: 0 24px;
   font-family: "DIN Pro", "Trebuchet MS", sans-serif;
   font-size: 15px;
   font-weight: 500;
-  text-transform: uppercase;
+  text-transform: none;
   letter-spacing: 0.02em;
   color: #FFFFFF;
   cursor: pointer;
@@ -343,4 +369,3 @@
 body.contact-modal-open {
   overflow: hidden;
 }
-
