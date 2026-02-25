@@ -9,18 +9,50 @@
   var overlay = document.querySelector('.badges-modal__overlay');
   var closeBtn = document.querySelector('.badges-modal__close');
 
+  function uniq(list) {
+    var seen = Object.create(null);
+    var out = [];
+    (list || []).forEach(function (value) {
+      if (!value || seen[value]) return;
+      seen[value] = true;
+      out.push(value);
+    });
+    return out;
+  }
+
+  function getBadgeIdFromTag(tag) {
+    if (!tag || !tag.classList) return '';
+    var badgeClass = Array.from(tag.classList).find(function (cls) {
+      return cls.indexOf('similar-projects__tag--') === 0;
+    });
+    if (!badgeClass) return '';
+    return badgeClass.replace('similar-projects__tag--', '').trim();
+  }
+
+  function getWrapBadges(wrap) {
+    if (!wrap) return [];
+    var badgesStr = wrap.getAttribute('data-badges') || '';
+    var fromData = badgesStr.split(',').map(function (s) { return s.trim(); }).filter(Boolean);
+    if (fromData.length > 0) return uniq(fromData);
+
+    var fromTags = Array.from(wrap.querySelectorAll('.similar-projects__tag')).map(function (tag) {
+      return getBadgeIdFromTag(tag);
+    }).filter(Boolean);
+    return uniq(fromTags);
+  }
+
   function openModal(activeBadges) {
     if (!modal) return;
-    activeBadges = activeBadges || [];
+    activeBadges = uniq(activeBadges || []);
 
-    // Установить активные/неактивные иконки
+    // Показываем только те бейджи, которые есть на выбранной карточке.
     modal.querySelectorAll('.badges-modal__item').forEach(function (item) {
       var badge = item.getAttribute('data-badge');
-      if (activeBadges.indexOf(badge) !== -1) {
-        item.classList.remove('badges-modal__item--inactive');
-      } else {
-        item.classList.add('badges-modal__item--inactive');
-      }
+      var isVisible = activeBadges.indexOf(badge) !== -1;
+      item.hidden = !isVisible;
+      item.setAttribute('aria-hidden', isVisible ? 'false' : 'true');
+      item.style.display = isVisible ? '' : 'none';
+      item.classList.remove('badges-modal__item--inactive');
     });
 
     document.body.classList.add('badges-modal-open');
@@ -46,8 +78,11 @@
         e.preventDefault();
         e.stopPropagation();
         var wrap = tag.closest('.similar-projects__image-wrap');
-        var badgesStr = wrap ? wrap.getAttribute('data-badges') : '';
-        var activeBadges = badgesStr ? badgesStr.split(',').map(function (s) { return s.trim(); }) : [];
+        var activeBadges = getWrapBadges(wrap);
+        if (activeBadges.length === 0) {
+          var current = getBadgeIdFromTag(tag);
+          if (current) activeBadges = [current];
+        }
         openModal(activeBadges);
       });
     });
