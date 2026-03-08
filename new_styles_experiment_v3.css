@@ -1,0 +1,361 @@
+/* Experimental styles for residential_v3 and maket_page_v2 only */
+
+body.page--residential-v3,
+body.page--maket-v2 {
+  --exp-font-scale: 1.5;
+}
+
+/* Typography scale x1.5 for key UI text nodes */
+body.page--residential-v3 .name_main h1,
+body.page--maket-v2 .name_main h1 {
+  font-size: calc(18px * var(--exp-font-scale));
+}
+
+body.page--residential-v3 .name_main h2,
+body.page--maket-v2 .name_main h2 {
+  font-size: calc(22px * var(--exp-font-scale));
+}
+
+body.page--residential-v3 #breadcrumbs p,
+body.page--residential-v3 #breadcrumbs a,
+body.page--maket-v2 #breadcrumbs p,
+body.page--maket-v2 #breadcrumbs a,
+body.page--residential-v3 .maket-description p,
+body.page--maket-v2 .maket-description p,
+body.page--residential-v3 .portfolio_text p,
+body.page--maket-v2 .portfolio_text p,
+body.page--residential-v3 .chip-tag,
+body.page--maket-v2 .chip-tag,
+body.page--residential-v3 .m-menu__list a,
+body.page--maket-v2 .m-menu__list a,
+body.page--residential-v3 .examples-slider__subtitle,
+body.page--residential-v3 .lighting-section__intro,
+body.page--residential-v3 .control-method-content__description,
+body.page--residential-v3 .yandex-review-card__meta,
+body.page--residential-v3 .yandex-review-card__date,
+body.page--residential-v3 .yandex-review-card__text,
+body.page--residential-v3 .delivery-section__text {
+  font-size: calc(14px * var(--exp-font-scale));
+}
+
+body.page--residential-v3 .m-btn-more,
+body.page--residential-v3 .m-btn-submit,
+body.page--maket-v2 .m-btn-more,
+body.page--maket-v2 .m-btn-submit,
+body.page--residential-v3 .examples-slider__title-link,
+body.page--residential-v3 .slider__slide-title,
+body.page--residential-v3 .layouts-section__subtitle,
+body.page--residential-v3 .control-method-content__subtitle,
+body.page--residential-v3 .yandex-review-card__name,
+body.page--residential-v3 .lighting-circles__title,
+body.page--residential-v3 .trust-feature__title {
+  font-size: calc(16px * var(--exp-font-scale));
+}
+
+body.page--residential-v3 .examples-section__title,
+body.page--residential-v3 .layouts-section__title,
+body.page--residential-v3 .lighting-section__title,
+body.page--residential-v3 .control-methods-section__title,
+body.page--residential-v3 .trust-section__title,
+body.page--residential-v3 .delivery-section__title,
+body.page--residential-v3 .reviews-section__title {
+  font-size: calc(22px * var(--exp-font-scale));
+}
+
+/* Unified image radius */
+body.page--residential-v3 .slider__image,
+body.page--maket-v2 .slider__image,
+body.page--residential-v3 .examples-slider__image,
+body.page--residential-v3 .layouts-section__image,
+body.page--residential-v3 .control-method-content__image,
+body.page--maket-v2 .similar-projects__item img,
+body.page--residential-v3 .similar-projects__item img,
+body.page--residential-v3 .similar-projects__image-wrap img:not(.similar-projects__tag),
+body.page--residential-v3 .lighting-circles__photo {
+  border-radius: 10px;
+}
+
+/* CTA style based on "Сбросить фильтры" */
+body.page--residential-v3 .cta-cost-btn {
+  background: #ffffff;
+  border: 1px solid #8cc540;
+  color: #414142;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+body.page--residential-v3 .cta-cost-btn:hover {
+  background-color: rgba(140, 197, 64, 0.08);
+}
+
+body.page--residential-v3 .cta-cost-btn:active {
+  background-color: rgba(140, 197, 64, 0.15);
+}
+
+/* Client logos ribbon */
+body.page--residential-v3 .clients-ribbon {
+  width: 100%;
+  max-width: var(--grid-content-width);
+  margin: 4px auto 14px;
+}
+
+body.page--residential-v3 .clients-ribbon__title {
+  margin: 0 0 8px;
+  font-family: 'DIN Pro Condensed', 'DIN Pro', sans-serif;
+  font-size: calc(18px * var(--exp-font-scale));
+  color: #414142;
+}
+
+body.page--residential-v3 .clients-ribbon__track {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 2px;
+}
+
+body.page--residential-v3 .clients-ribbon__track::-webkit-scrollbar {
+  display: none;
+}
+
+body.page--residential-v3 .clients-ribbon__logo {
+  flex: 0 0 auto;
+  min-width: 110px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(140, 197, 64, 0.35);
+  background: #f7fbef;
+  color: #626161;
+  font-family: 'DIN Pro', 'Trebuchet MS', sans-serif;
+  font-size: calc(12px * var(--exp-font-scale));
+  text-align: center;
+}
+
+/* Layout chips section */
+body.page--residential-v3 .layout-methods-section__chips {
+  margin-bottom: 12px;
+}
+
+/* Lighting circles */
+body.page--residential-v3 .lighting-section--circles {
+  width: 100%;
+  max-width: var(--grid-content-width);
+  margin: 24px auto 12px;
+}
+
+body.page--residential-v3 .lighting-section__title--accent {
+  color: #8cc540;
+  text-shadow: 0 0 0.1px #8cc540, 0 1px 0 rgba(65, 65, 66, 0.35);
+}
+
+body.page--residential-v3 .lighting-circles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 10px;
+}
+
+body.page--residential-v3 .lighting-circles__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+body.page--residential-v3 .lighting-circles__photo-wrap {
+  width: 136px;
+  height: 136px;
+  border-radius: 50%;
+  border: 2px solid #8cc540;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+body.page--residential-v3 .lighting-circles__photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+body.page--residential-v3 .lighting-circles__title {
+  margin: 8px 0 0;
+  color: #414142;
+  line-height: 1.25;
+}
+
+/* Portfolio filters remain in code, but hidden in UI */
+body.page--residential-v3 .similar-projects__filters-toolbar,
+body.page--residential-v3 .similar-projects__active-filters,
+body.page--residential-v3 .similar-projects__hidden-field-wrap,
+body.page--residential-v3 .filters-sheet,
+body.page--residential-v3 .similar-projects__empty {
+  display: none !important;
+}
+
+body.page--residential-v3 .similar-projects__more-link {
+  display: table;
+  margin: 12px auto 0;
+  font-family: 'DIN Pro', 'Trebuchet MS', sans-serif;
+}
+
+body.page--residential-v3 .similar-projects__cta {
+  margin: 12px auto 0;
+  width: 100%;
+  max-width: var(--grid-content-width);
+}
+
+body.page--residential-v3 .similar-projects__item.is-hidden-by-more,
+body.page--residential-v3 .similar-projects__item.is-hidden-overflow {
+  display: none !important;
+}
+
+/* Trust block */
+body.page--residential-v3 .trust-section,
+body.page--residential-v3 .delivery-section,
+body.page--residential-v3 .reviews-section {
+  width: 100%;
+  max-width: var(--grid-content-width);
+  margin: 24px auto 12px;
+}
+
+body.page--residential-v3 .trust-section__title,
+body.page--residential-v3 .delivery-section__title,
+body.page--residential-v3 .reviews-section__title {
+  margin: 0 0 12px;
+  color: #414142;
+  text-align: left;
+}
+
+body.page--residential-v3 .trust-section__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+body.page--residential-v3 .trust-feature {
+  min-height: 138px;
+  border-radius: 12px;
+  border: 1px solid rgba(140, 197, 64, 0.35);
+  background: #fbfdf7;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+body.page--residential-v3 .trust-feature__icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid #8cc540;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #8cc540;
+  font-family: 'DIN Pro Condensed', 'DIN Pro', sans-serif;
+  font-size: calc(18px * var(--exp-font-scale));
+  font-weight: 700;
+  line-height: 1;
+}
+
+body.page--residential-v3 .trust-feature__icon--quality::before {
+  content: 'Q';
+}
+
+body.page--residential-v3 .trust-feature__icon--sample::before {
+  content: 'S';
+}
+
+body.page--residential-v3 .trust-feature__icon--budget::before {
+  content: '$';
+}
+
+body.page--residential-v3 .trust-feature__icon--deadline::before {
+  content: 'T';
+}
+
+body.page--residential-v3 .trust-feature__title {
+  margin: 0;
+  color: #414142;
+  line-height: 1.25;
+}
+
+body.page--residential-v3 .delivery-section__text {
+  margin: 0;
+  color: #626161;
+  line-height: 1.4;
+}
+
+/* Yandex-like reviews cards */
+body.page--residential-v3 .reviews-section__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+body.page--residential-v3 .yandex-review-card {
+  border: 1px solid #e4e4e4;
+  border-radius: 14px;
+  background: #fff;
+  padding: 14px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+body.page--residential-v3 .yandex-review-card__head {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+body.page--residential-v3 .yandex-review-card__avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #f0f0f0;
+  color: #414142;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'DIN Pro Condensed', 'DIN Pro', sans-serif;
+  font-size: calc(18px * var(--exp-font-scale));
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+body.page--residential-v3 .yandex-review-card__name {
+  margin: 0;
+  color: #111;
+  line-height: 1.2;
+}
+
+body.page--residential-v3 .yandex-review-card__meta,
+body.page--residential-v3 .yandex-review-card__date {
+  margin: 2px 0 0;
+  color: #767676;
+  line-height: 1.2;
+}
+
+body.page--residential-v3 .yandex-review-card__text {
+  margin: 0;
+  color: #222;
+  line-height: 1.45;
+}
+
+body.page--residential-v3 .yandex-review-card__more {
+  display: inline-block;
+  margin-top: 8px;
+}
+
+body.page--residential-v3 .action-buttons--bottom {
+  margin-top: 14px;
+  margin-bottom: 24px;
+}
