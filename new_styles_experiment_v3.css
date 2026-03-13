@@ -239,7 +239,8 @@ body.page--residential-v3 .similar-projects__empty {
   display: none !important;
 }
 
-body.page--residential-v3 .similar-projects__more-link {
+body.page--residential-v3 .similar-projects__more-link,
+body.page--maket-v2 .similar-projects__more-link {
   display: table;
   margin: 12px auto 0;
   font-family: 'DIN Pro', 'Trebuchet MS', sans-serif;
@@ -253,6 +254,56 @@ body.page--residential-v3 .similar-projects__cta {
 
 body.page--residential-v3 .similar-projects__item.is-hidden-by-more,
 body.page--residential-v3 .similar-projects__item.is-hidden-overflow {
+  display: none !important;
+}
+
+body.page--maket-v2 .similar-projects__item {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.04),
+    inset 0 0 0 1px rgba(65, 65, 66, 0.14);
+  padding-bottom: 16px;
+}
+
+body.page--maket-v2 .similar-projects__image-wrap {
+  position: relative;
+  display: block;
+  line-height: 0;
+}
+
+body.page--maket-v2 .similar-projects__image-wrap img {
+  display: block;
+  width: 296px;
+  height: 296px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+body.page--maket-v2 .similar-projects__item .examples-slider__content {
+  margin-top: 8px;
+  text-align: center;
+}
+
+body.page--maket-v2 .similar-projects__item .examples-slider__title-link {
+  display: block;
+  font-family: 'DIN Pro', 'Trebuchet MS', sans-serif;
+  font-size: calc(16px * var(--exp-font-scale));
+  font-weight: 600;
+  color: #8cc540;
+  text-decoration: none;
+  margin-bottom: 4px;
+}
+
+body.page--maket-v2 .similar-projects__item .examples-slider__subtitle {
+  margin: 0;
+  color: #414142;
+  opacity: 0.7;
+  line-height: 1.4;
+}
+
+body.page--maket-v2 .similar-projects__item.is-hidden-by-more {
   display: none !important;
 }
 
