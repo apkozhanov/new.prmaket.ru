@@ -38,6 +38,11 @@ body.page--residential-v3 .delivery-section__text {
   font-size: calc(14px * var(--exp-font-scale));
 }
 
+body.page--residential-v3 .brand-highlight {
+  color: #8cc540;
+  font-weight: 700;
+}
+
 body.page--residential-v3 .m-btn-more,
 body.page--residential-v3 .m-btn-submit,
 body.page--maket-v2 .m-btn-more,
@@ -47,7 +52,7 @@ body.page--residential-v3 .slider__slide-title,
 body.page--residential-v3 .layouts-section__subtitle,
 body.page--residential-v3 .control-method-content__subtitle,
 body.page--residential-v3 .yandex-review-card__name,
-body.page--residential-v3 .lighting-circles__title,
+body.page--residential-v3 .lighting-slider__title,
 body.page--residential-v3 .trust-feature__title {
   font-size: calc(16px * var(--exp-font-scale));
 }
@@ -56,10 +61,13 @@ body.page--residential-v3 .examples-section__title,
 body.page--residential-v3 .layouts-section__title,
 body.page--residential-v3 .lighting-section__title,
 body.page--residential-v3 .control-methods-section__title,
+body.page--residential-v3 .clients-ribbon__title,
 body.page--residential-v3 .trust-section__title,
 body.page--residential-v3 .delivery-section__title,
 body.page--residential-v3 .reviews-section__title {
   font-size: calc(22px * var(--exp-font-scale));
+  color: #414142;
+  text-shadow: none;
 }
 
 /* Unified image radius */
@@ -102,38 +110,52 @@ body.page--residential-v3 .clients-ribbon {
 body.page--residential-v3 .clients-ribbon__title {
   margin: 0 0 8px;
   font-family: 'DIN Pro Condensed', 'DIN Pro', sans-serif;
-  font-size: calc(18px * var(--exp-font-scale));
-  color: #414142;
+}
+
+body.page--residential-v3 .clients-ribbon__viewport {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
 }
 
 body.page--residential-v3 .clients-ribbon__track {
   display: flex;
-  gap: 8px;
-  overflow-x: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  padding-bottom: 2px;
+  width: max-content;
+  gap: 12px;
+  will-change: transform;
+  animation: clients-ribbon-marquee 16s linear infinite;
 }
 
-body.page--residential-v3 .clients-ribbon__track::-webkit-scrollbar {
-  display: none;
+body.page--residential-v3 .clients-ribbon__group {
+  display: flex;
+  gap: 12px;
+  flex: 0 0 auto;
 }
 
 body.page--residential-v3 .clients-ribbon__logo {
   flex: 0 0 auto;
-  min-width: 110px;
-  height: 46px;
+  height: 52px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 10px;
-  border-radius: 10px;
-  border: 1px solid rgba(140, 197, 64, 0.35);
-  background: #f7fbef;
-  color: #626161;
-  font-family: 'DIN Pro', 'Trebuchet MS', sans-serif;
-  font-size: calc(12px * var(--exp-font-scale));
-  text-align: center;
+  padding: 0;
+}
+
+body.page--residential-v3 .clients-ribbon__image {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: 52px;
+  object-fit: contain;
+}
+
+@keyframes clients-ribbon-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 /* Layout chips section */
@@ -141,7 +163,7 @@ body.page--residential-v3 .layout-methods-section__chips {
   margin-bottom: 12px;
 }
 
-/* Lighting circles */
+/* Lighting slider */
 body.page--residential-v3 .lighting-section--circles {
   width: 100%;
   max-width: var(--grid-content-width);
@@ -149,26 +171,47 @@ body.page--residential-v3 .lighting-section--circles {
 }
 
 body.page--residential-v3 .lighting-section__title--accent {
-  color: #8cc540;
-  text-shadow: 0 0 0.1px #8cc540, 0 1px 0 rgba(65, 65, 66, 0.35);
+  color: #414142;
+  text-shadow: none;
 }
 
-body.page--residential-v3 .lighting-circles {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px 10px;
+body.page--residential-v3 .lighting-slider {
+  --lighting-circle-size: 296px;
+  --lighting-title-height: 72px;
+  width: 297px;
+  max-width: 297px;
+  margin: 0 auto;
 }
 
-body.page--residential-v3 .lighting-circles__item {
+body.page--residential-v3 .lighting-slider .slider__slide {
+  align-items: flex-start;
+}
+
+body.page--residential-v3 .lighting-slider .slider__arrow {
+  top: calc(var(--lighting-title-height) + (var(--lighting-circle-size) / 2));
+}
+
+body.page--residential-v3 .lighting-slider__slide-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  width: 100%;
 }
 
-body.page--residential-v3 .lighting-circles__photo-wrap {
-  width: 136px;
-  height: 136px;
+body.page--residential-v3 .lighting-slider__title {
+  min-height: var(--lighting-title-height);
+  margin: 0;
+  color: #414142;
+  line-height: 1.25;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.page--residential-v3 .lighting-slider__circle {
+  width: var(--lighting-circle-size);
+  height: var(--lighting-circle-size);
   border-radius: 50%;
   border: 2px solid #8cc540;
   display: flex;
@@ -176,19 +219,14 @@ body.page--residential-v3 .lighting-circles__photo-wrap {
   justify-content: center;
   background: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
 }
 
-body.page--residential-v3 .lighting-circles__photo {
-  width: 120px;
-  height: 120px;
+body.page--residential-v3 .lighting-slider__image {
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   object-fit: cover;
-}
-
-body.page--residential-v3 .lighting-circles__title {
-  margin: 8px 0 0;
-  color: #414142;
-  line-height: 1.25;
 }
 
 /* Portfolio filters remain in code, but hidden in UI */
@@ -230,7 +268,6 @@ body.page--residential-v3 .trust-section__title,
 body.page--residential-v3 .delivery-section__title,
 body.page--residential-v3 .reviews-section__title {
   margin: 0 0 12px;
-  color: #414142;
   text-align: left;
 }
 
@@ -252,34 +289,19 @@ body.page--residential-v3 .trust-feature {
 }
 
 body.page--residential-v3 .trust-feature__icon {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  border: 2px solid #8cc540;
+  width: 52px;
+  height: 52px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #8cc540;
-  font-family: 'DIN Pro Condensed', 'DIN Pro', sans-serif;
-  font-size: calc(18px * var(--exp-font-scale));
-  font-weight: 700;
-  line-height: 1;
+  flex-shrink: 0;
 }
 
-body.page--residential-v3 .trust-feature__icon--quality::before {
-  content: 'Q';
-}
-
-body.page--residential-v3 .trust-feature__icon--sample::before {
-  content: 'S';
-}
-
-body.page--residential-v3 .trust-feature__icon--budget::before {
-  content: '$';
-}
-
-body.page--residential-v3 .trust-feature__icon--deadline::before {
-  content: 'T';
+body.page--residential-v3 .trust-feature__icon-image {
+  display: block;
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
 }
 
 body.page--residential-v3 .trust-feature__title {
@@ -342,6 +364,22 @@ body.page--residential-v3 .yandex-review-card__date {
   margin: 2px 0 0;
   color: #767676;
   line-height: 1.2;
+}
+
+body.page--residential-v3 .yandex-review-card__rating {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-top: 6px;
+  color: #ffcc00;
+  line-height: 0;
+}
+
+body.page--residential-v3 .yandex-review-card__star {
+  display: block;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
 }
 
 body.page--residential-v3 .yandex-review-card__text {
